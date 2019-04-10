@@ -108,61 +108,44 @@ and open the template in the editor.
             {
               background-color: rgba(40,20,30,.60);
             }
-            .dropdown 
+            .buttonsub 
             {
               position: relative;
-              display: inline-block;
-            }
-            .dropdown-content
-            {
-              display: none;
-              position: absolute;
-              background-color: #f1f1f1;
-              min-width: 160px;
-              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-              z-index: 1;
-            }
-            .dropdown-content a 
-            {
+              background-color: aqua;
+              border: none;
+              font-size: 28px;
               color: black;
-              padding: 12px 16px;
+              padding: 20px;
+              width: 200px;
+              text-align: center;
+              -webkit-transition-duration: 0.4s; 
+              transition-duration: 0.4s;
               text-decoration: none;
-              display: block;
-            }
-            .dropdown-content a:hover
-            {
-                background-color: #ddd;
-            }
-            .dropdown:hover .dropdown-content 
-            {
-                display: block;
+              overflow: hidden;
+              cursor: pointer;
+              border-radius: 100%;
             }
     </style>
     </head>
     <body>
             <div class="main">
             <h1><center><b>BIRTHDAY</b></center></h1>
+            <form action="Totals.jsp">
+                <center><input type="submit" name="sub" class="buttonsub" value="SUBMIT"></center>
+            </form>
             <hr>
-       
+            
             <div id="myBtnContainer">
                 <button class="btn active">ALL SERVICES</button>
                 <button class="btn" onclick="filterSelection('stage')">STAGE</button>
                 <button class="btn" onclick="filterSelection('decoration')">DECORATION</button>
                 <button class="btn" onclick="filterSelection('lightsound')">LIGHTS & SOUNDS</button>
                 <button class="btn" onclick="filterSelection('cameravideo')">CAMERA & VIDEO GRAPH</button>
-                <div class="dropdown">
-                    <button class="btn" onclick="filterSelection('catering')">CATERING</button>
-                <div class="dropdown-content">
-                    <a href="#">NON-VEG</a>
-                    <a href="#">VEG</a>
-                    <a href="#">MIXED</a>
-                </div>
-                </div>
+                <button class="btn" onclick="filterSelection('catering')">CATERING</button>
                 <button class="btn" onclick="filterSelection('cake')">CAKES</button>
-            </div>
-
+            </div>       
+            
             <div class="row">
-    
             <div class="column stage">
                 <div class="content">
                 <img src="bday2.jpg" style="width:300px; height:200px">
@@ -563,26 +546,7 @@ and open the template in the editor.
                 
         </div> 
         </div> 
-        <script>
-            
-        function showPrice()
-        {
-            var c = document.getElementById("myCheck1").value;
-            window.alert("YOU HAVE SELECTED $" + c);
-        }       
-        function myFunction() 
-        {
-          var checkBox = document.getElementById("myCheck");
-          var text = document.getElementById("text");
-          if (checkBox.checked == true)
-          {
-            text.style.display = "block";
-          } else 
-          {
-             text.style.display = "none";
-          }
-        }
-        </script>
+        
         <script>
         filterSelection("all")
         function filterSelection(c) 
