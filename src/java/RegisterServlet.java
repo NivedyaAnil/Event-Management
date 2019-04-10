@@ -31,12 +31,14 @@ public class RegisterServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            
             String name = request.getParameter("username");
             String event = request.getParameter("event");
             String person = request.getParameter("person");
             String dt = request.getParameter("dt");
             String email = request.getParameter("email");
             String phone = request.getParameter("phone");
+            int contact = Integer.parseInt(phone);
             String address = request.getParameter("add");
             String password = request.getParameter("password");
             int nop = Integer.parseInt(person);
@@ -68,7 +70,7 @@ public class RegisterServlet extends HttpServlet {
                 ps.setInt(3,nop);
                 ps.setString(4,dt);
                 ps.setString(5,email);               
-                ps.setString(6,phone);
+                ps.setInt(6,contact);
                 ps.setString(7,address);
                 ps.setString(8, password);
                 ps.executeUpdate();
