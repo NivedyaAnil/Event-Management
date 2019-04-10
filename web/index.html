@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <style>
+            .row 
+            {
+                margin-right: 0px;
+                margin-left: 0px;
+            }
+            body 
+            {
+                margin: 0;
+                font: 400 15px Lato, sans-serif;
+                line-height: 1.8;
+                color: #818181;
+                background: black;
+                background-size: contain;
+            }
+            html,body 
+            {
+                height:100%;
+                width:100%;
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .bg
+            {
+                height: 90%; 
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url("bg.jpg");
+            }
+            h1 
+            {
+                font-size: 40px;
+                text-transform: fullsize-kana;
+                color: #f2f2f2;
+            }
+            h2 
+            {
+                font-size: 20px;
+                text-transform: fullsize-kana;
+                color:black;
+            }
+            h3 
+            {
+              font-size: 30px;
+              text-transform: fullsize-kana;
+              color: white;
+            }    
+            #navbar 
+            {
+                overflow: hidden;
+                background-color: burlywood;
+            }
+            #navbar a 
+            {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 15px 20px;
+                text-decoration: none;
+                font-size: 25px;
+            }
+            #navbar a:hover 
+            {
+                background-color: bisque;
+                color: darkgoldenrod;
+            }
+            #navbar a.active 
+            {
+                background-color: #4CAF50;
+                color: white;
+            }
+            .content 
+            {
+                padding: 16px;
+            }
+            .sticky 
+            {
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+            .sticky + .content 
+            {
+                padding-top: 60px;
+            }
+            .container 
+            {
+                position: relative;
+                width: 50%;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            .container img 
+            {
+                width: 100%;
+                height: auto;
+                vertical-align: text-top;
+            }
+            .container .btn 
+            {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                background-color: bisque;
+                color: black;
+                font-size: 20px;
+                padding: 12px 24px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                text-align: center;
+            }
+            .container .btn:hover 
+            {
+                background-color: burlywood;            
+            }          
+            #myImg 
+            {
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            #myImg:hover 
+            {
+                opacity: 0.7;
+            }
+            .modal 
+            {
+                display: none;
+                position: fixed; 
+                z-index: 1;
+                padding-top: 100px; 
+                left: 0;
+                top: 0;
+                width: 100%; 
+                height: 100%;
+                overflow: auto; 
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.9); 
+            }
+            .modal-content 
+            {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+            }
+            #caption 
+            {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+                text-align: center;
+                color: #ccc;
+                padding: 10px 0;
+                height: 150px;
+            }
+            .modal-content, #caption 
+            {  
+                -webkit-animation-name: zoom;
+                -webkit-animation-duration: 0.6s;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+            }
+            @-webkit-keyframes zoom 
+            {
+              from {-webkit-transform:scale(0)} 
+              to {-webkit-transform:scale(1)}
+            }
+            @keyframes zoom 
+            {
+              from {transform:scale(0)} 
+              to {transform:scale(1)}
+            }
+            .close 
+            {
+              position: absolute;
+              top: 15px;
+              right: 35px;
+              color: #f1f1f1;
+              font-size: 40px;
+              font-weight: bold;
+              transition: 0.3s;
+            }
+            .close:hover,.close:focus 
+            {
+              color: #bbb;
+              text-decoration: none;
+              cursor: pointer;
+            }
+            @media only screen and (max-width: 700px)
+            {
+            .modal-content 
+            {
+                width: 100%;
+            }
+            }
+            .buttonload 
+            {
+                background-color: burlywood;
+                color: black;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 20%; 
+                font-size: 16px; 
+            }
+            .fa 
+            {
+                margin-left: -12px;
+                margin-right: 8px;
+            }
+            .container 
+            {
+              padding: 16px;
+            }
+         
+            input[type=text], input[type=password]
+            {
+              width: 100%;
+              height: 50%;
+              padding: 12px 20px;
+              margin: 8px 0;
+              display: inline-block;
+              border: 1px solid #ccc;
+              box-sizing: border-box;
+            }
+            .buttons 
+            {
+              position: relative;
+              background-color: burlywood;
+              border: none;
+              font-size: 28px;
+              color: black;
+              padding: 20px;
+              width: 200px;
+              text-align: center;
+              -webkit-transition-duration: 0.4s; 
+              transition-duration: 0.4s;
+              text-decoration: none;
+              overflow: hidden;
+              cursor: pointer;
+              border-radius: 100%;
+}
+            .buttons:after 
+            {
+              content: "";
+              background: bisque;
+              display: block;
+              position: absolute;
+              padding-top: 300%;
+              padding-left: 350%;
+              margin-left: -20px!important;
+              margin-top: -120%;
+              opacity: 0;
+              transition: all 0.8s
+            }
+            .buttons:active:after 
+            {
+              padding: 0;
+              margin: 0;
+              opacity: 1;
+              transition: 0s
+            }
+            .cancelbtn 
+            {
+              width: auto;
+              padding: 10px 18px;
+              background-color: #f44336;
+            }
+            .imgcontainer
+            {
+              text-align: center;
+              margin: 24px 0 12px 0;
+              position: relative;
+            }
+            .avatar 
+            {
+              width: 50%;
+              border-radius: 50%;
+            }
+            .container 
+            {
+              padding: 20px;
+            }
+            span.psw 
+            {
+              float: right;
+              padding-top: 16px;
+            }
+            .modal1 
+            {
+              display: none;
+              position: fixed; 
+              z-index: 1; 
+              left: 0;
+              top: 0;
+              width: 100%; 
+              height: 100%; 
+              overflow: auto; 
+              background-color: rgb(0,0,0); 
+              background-color: rgba(0,0,0,0.4); 
+              padding-top: 60px;
+            }
+            .modal-content1 
+            {
+              background-color: rgba(0,0,0,0.4);  
+              margin: 5% auto 15% auto;
+              border: 1px solid #888;
+              width: 50%; 
+            }
+            .close 
+            {
+              position: absolute;
+              right: 25px;
+              top: 0;
+              color: #000;
+              font-size: 35px;
+              font-weight: bold;
+            }
+            .close:hover,.close:focus 
+            {
+              color: red;
+              cursor: pointer;
+            }
+            .animate 
+            {
+              -webkit-animation: animatezoom 0.6s;
+              animation: animatezoom 0.6s
+            }
+
+            @-webkit-keyframes animatezoom 
+            {
+              from {-webkit-transform: scale(0)} 
+              to {-webkit-transform: scale(1)}
+            } 
+            @keyframes animatezoom 
+            {
+              from {transform: scale(0)} 
+              to {transform: scale(1)}
+            }
+            @media screen and (max-width: 300px) 
+            {
+              span.psw 
+              {
+                 display: block;
+                 float: none;
+              }
+              .cancelbtn
+              {
+                 width: 100%;
+              }
+            }
+            .button 
+            {
+              background-color: #f1f1f1;
+              border: none;
+              color: black;
+              padding: 10px 20px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              margin: 4px 2px;
+              cursor: pointer;
+              border-radius: 16px;
+            }
+            .button:hover 
+            {
+              background-color: burlywood;
+            }
+            .column1 
+            {
+              float: left;
+              width: 33.33%;
+              padding: 5px;
+            }
+            .row1::after 
+            {
+              content: "";
+              clear: both;
+              display: table;
+            }            
+        </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar">
+        <div class="bg">
+            <img src="icon.PNG" style="width:15%;height:30%;top:25%;border-radius: 50%;">
+            <p align="right"><button class="buttons" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">ADMIN</button></p>
+            <center>
+                <form action="registration.html" method="POST">
+                    <button type="submit" style="width:content-box;" name="registration" class="buttonload"><i class="fa fa-refresh fa-spin"></i><b>CONNECT</b></button>
+                </form>
+            </center>   
+        </div>
+        
+        <div id="id01" class="modal1">
+            <form class="modal-content1 animate" action="AdminServlet">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <img src="icon.PNG" alt="Avatar" class="avatar" style="width:30%;max-width:300px">
+            </div>
+
+            <div class="container">
+                <label class="uname"><b><h3>NAME</h3></b></label>
+                    <input type="text" name="uname" style="background-color:rgba(40,20,30,.50);" required>
+                    <label class="psw"><b><h3>PASSWORD</h3></b></label>
+                    <input type="password" name="psw" style="background-color:rgba(40,20,30,.50);" required>
+                <center><button class="button" type="submit"><b>Login</b></button></center>
+            </div>
+            </form>
+        </div>
+        
+            <div id="navbar">
+                <a href="#about"><b>About NAAM</b></a>
+                <a href="#service"><b>Service</b></a>
+                <a href="#showcase"><b>Showcase</b></a>
+                <a href="#contact"><b>Contact</b></a>
+            </div>
+
+            <div id="about" class="about">
+            <center>
+                <span style="color:white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h1><b>About NAAM</b></h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<br>
+		<div style="color:white;">
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-star-half-o fa-spin" style="font-size:20px;"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>
+		</div>
+            </center>
+	<div style="color:white; font-size:20px; font-family: initial;">
+            <b>
+            <p style="padding-left:13%;padding-right:15%;">
+                <i class="fa fa-quote-left fa-2x fa-pull-left fa-border" style="border-color:white; color:white;"></i>
+                <br>
+                NAAM EVENTS FOREVER: One of God own country's - Kerala’s leading integrated event management companies with an international footprint. 
+                <br> 
+                An event management company with its head office and production facility at Kochi, Kerala, India and event is focused to conceptualize design and execute top of the line corporate events , stunning parties and extravagant wedding as per the distinct needs of clients. 
+                <br> 
+                Equipped with the state-of-the-art in-house fabrication workshop that enables NAAM EVENTS FOREVER events to offer an exhaustive variety of designs, thematic sets, customized setups, trend setting concepts translated through our expertise in taking care of every minute detail right from the color schemes , floral decor, venue management , catering to entertainment and backdrop designs. 
+                <br>
+            </p>
+            <p style="padding-left:13%;padding-right:15%;">
+                NAAM EVENTS FOREVER events has worked closely with clients to provide the perfect mix of breath-taking event design , logistics planning and execution , and individualized client services , including wedding , birthday , parties and other events. <br>
+                    Our goal is to transform every client’s personal events into sophisticated events that bring a level of art to each facet of design and execution. <br>
+                    With a highly select client list , we transform personal and corporate brands into deeply memorable experiences for clients and guests alike , orchestrating every detail with precision and grace.
+                    Headquartered in Kochi NAAM EVENTS FOREVER events brings an urbane design  with boutique focus to every event, for clients both domestic and abroad. <br>
+                    So with NAAM EVENTS FOREVER events be rest assured that your every occasion will be under line.
+            </p>
+            <P style="padding-left:13%;padding-right:15%;">
+                Whatever be the event , NAAM EVENTS FOREVER events  be alongside you . Every get together will be worth a thousand happy moments . 
+                <br>
+                Each of those will be one of the most memorable moments in your life . Whether it be a Wedding , Birthday , Party , and Get together We will be with you ………
+            <i class="fa fa-quote-right fa-2x fa-pull-right fa-border" style="border-color:white; color:white;"></i>
+            </P>
+            </b>
+	</div>
+	</div>
+        
+        <div id="service" class="service">
+             <center>
+                 <span style="color:white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h1><b>Service</b></h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<br>
+		<div style="color:white;">
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;   
+                    <i class="fa fa-star-half-o fa-spin" style="font-size:20px;"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>
+		</div>
+            </center>
+        <div style="color:white; font-size:20px; font-family:fantasy;">
+            <b>
+            <p style="padding-left:13%;padding-right:15%;">
+                <b>Our team of seasoned professionals, visionary designers and skilled craftsmen work closely with the client to make every occasion, an extraordinary one.
+            <br>
+                We at NAAM EVENTS FOREVER make sure that every detail is flawlessly planned and executed without tampering the venue property.</b>
+            </p>
+            </b>
+	</div>
+        </div>    
+
+	<div class="row">
+            <center>
+                <img id="myImg" src="wed9.jpeg" style="width:10%;max-width:20%;">
+                <div id="myModal" class="modal">
+                  <span class="close">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption">WEDDING</div>
+                </div>
+            </center>
+		<div>
+                    <center><h1><b>Wedding</b></h1></center>
+		</div>
+		<div style="color:white; font-size:20px; font-family:fantasy;">
+                    <p style="padding-left:13%;padding-right:15%;">
+                    <b>A Wedding is a ceremony where two people are united in marriage. Matches are made in heaven and conducted in earth . This event which is the most closest to your heart will be captured in the most memorable way with NAAM EVENTS FOREVER.
+                            <br> 
+                               Weddings are not about spending the least or the most amount of money ; they are about spending good money on real elements that more important for your special day
+                            <br>
+                                NAAM EVENTS FOREVER has planned , designed and styled over one hundred plus wedding celebrations across different cultures and destinations. We are perfectly positioned with all the experience to help you create a truly exceptional occasion , no matter what your priorities are , ensuring that you have the very best provisions , all coordinated together perfectly with an organized and lovely design plan.
+                    </b></p>
+		</div>
+            <center>
+                <img id="myImg" src="bday22.jpeg" style="width:10%;max-width:20%;">
+                <div id="myModal" class="modal">
+                  <span class="close">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption">BIRTHDAY</div>
+                </div>
+            </center>
+		<div>
+                    <center><h1><b>Birthday</b></h1></center>
+		</div>
+		<div style="color:white; font-size:20px; font-family:fantasy;">
+                    <p style="padding-left:13%;padding-right:15%;">
+                    <b>A Birthday is the anniversary of the birth of a person , or figuratively of an institution.
+                            <br>
+                               To bring a color full smile to your color full life along with your dear guest allow NAAM EVENTS FOREVER group to make it beautiful moments and to be a part of your special day.
+                    </b></p>
+		</div>
+            <center>
+                <img id="myImg" src="event2.jpg" style="width:10%;max-width:20%;">
+                <div id="myModal" class="modal">
+                  <span class="close">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption">PARTY</div>
+                </div>
+            </center>
+		<div>
+                    <center><h1><b>Party</b></h1></center>
+		</div>
+		<div style="color:white; font-size:20px; font-family:fantasy;">
+                    <p style="padding-left:13%;padding-right:15%;">
+                    <b>A Party is a gathering of people who have been invited by a host for the purposes of socializing , conversation , recreation , or as part of a festival or other commemoration of a special occasion.</b></p>    
+                </div>
+            <center>
+                <img id="myImg" src="event6.jpg" style="width:10%;max-width:20%;">
+                <div id="myModal" class="modal">
+                  <span class="close">&times;</span>
+                  <img class="modal-content" id="img01">
+                  <div id="caption">GET TOGETHER & FAMILY MEETS</div>
+                </div>
+            </center>
+		<div>
+                    <center><h1><b>Get Together</b></h1></center>
+		</div>
+		<div style="color:white; font-size:20px; font-family:fantasy;">
+                    <p style="padding-left:13%;padding-right:15%;">
+                    <b>The great moments are re created. We have dedicated team of planners who are instrumental in providing our clients with get together.</b></p>
+		</div>
+        </div>
+        
+        <div id="showcase" class="showcase">
+            <center>
+                <span style="color:white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h1><b>Showcase</b></h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<br>
+		<div style="color:white;">
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-star-half-o fa-spin" style="font-size:20px;"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>&nbsp;
+                    <i class="fa fa-minus"></i>
+		</div>
+            </center>
+	
+	</div>
+                <center><h1><b>EVENTS FOREVER</b></h1></center>
+                <div class="row1">
+                    <center>
+                <div class="column1">
+                    <img src="wed1.jpg" style="width:50%;">
+                    <div class="container" style="background-color:rgba(40,20,30,.50);">
+                        <h2><b><a href="wed.html" style="color:white; font-size:20px; font-family:fantasy;"><b>WEDDING</b></a></b></h2>                         
+                    </div>
+                </div>
+                <div class="column1">
+                    <img src="bday1.jpeg" style="width:50%;">
+                    <div class="container" style="background-color:rgba(40,20,30,.50);">
+                        <h2><b><a href="birth.html" style="color:white; font-size:20px; font-family:fantasy;"><b>BIRTHDAY</b></a></b></h2>                         
+                    </div>
+                </div>
+                <div class="column1">
+                    <img src="stage2.jpg" style="width:50%;">
+                    <div class="container" style="background-color:rgba(40,20,30,.50);">
+                        <h2><b><a href="djparty.html" style="color:white; font-size:20px; font-family:fantasy;"><b>PARTY</b></a></b></h2>                         
+                    </div>
+                </div><br>
+                <div class="column1">
+                   <span style="padding-left:127%"><img src="event7.jpeg" style="width:50%;"></span>
+                    <div class="container" style="background-color:rgba(40,20,30,.50);">
+                        <h2><b><a href="get.html" style="color:white; font-size:20px; font-family:fantasy;"><b>GET TOGETHER</b></a></b></h2>                         
+                    </div> </span>      
+                </div>            
+                    </center>
+                </div>
+                
+        <div id="contact" class="contact">
+	<center>
+            <span style="color:white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <h1><b>Contact Us</b></h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <br>
+            <div style="color:white;">
+                <i class="fa fa-minus"></i>&nbsp;
+                <i class="fa fa-minus"></i>&nbsp;
+                <i class="fa fa-minus"></i>&nbsp;
+                <i class="fa fa-minus"></i>&nbsp;
+                <i class="fa fa-minus"></i>&nbsp;
+                <i class="fa fa-minus"></i>&nbsp;
+                <i class="fa fa-minus"></i>&nbsp;
+                <i class="fa fa-minus"></i>&nbsp;
+                <i class="fa fa-minus"></i>&nbsp;
+                <i class="fa fa-globe fa-spin" style="font-size:25px;"></i>&nbsp;
+		<i class="fa fa-minus"></i>&nbsp;
+                <i class="fa fa-minus"></i>&nbsp;
+                <i class="fa fa-minus"></i>&nbsp;
+                <i class="fa fa-minus"></i>&nbsp;
+                <i class="fa fa-minus"></i>&nbsp;
+                <i class="fa fa-minus"></i>&nbsp;
+                <i class="fa fa-minus"></i>&nbsp;
+                <i class="fa fa-minus"></i>&nbsp;
+                <i class="fa fa-minus"></i>
+	</div>
+	</center>
+        </div>
+            
+        <div class="row" style="color:white; font-size:20px; font-family:fantasy;">
+        <center>
+            <b>
+                <i class="fa fa-home"></i>&nbsp;&nbsp;&nbsp;&nbsp;Kochi 682024 Kerala, India.<br>
+                <i class="fa fa-phone-square"></i>&nbsp;&nbsp;&nbsp;&nbsp;Call Us : +91 9994982080
+                <h2><a href="mailto:info@naamevents.com" style="color:white; font-size:20px; font-family:fantasy;"><i class="fa fa-envelope-square"></i>&nbsp;&nbsp;&nbsp;&nbsp;<b>Mail Us :naamevents@gmail.com</b></a></h2>
+            </b>   
+        </center>
+        </div>     
+        <script type="text/javascript">
+            $(window).load(function()
+            {
+                $(".loader").fadeOut("slow");
+            })
+        </script>        
+        <script>
+            window.onscroll = function() 
+            {
+                myFunction()
+            };
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+            function myFunction() 
+            {
+                if (window.pageYOffset >= sticky) 
+                {
+                    navbar.classList.add("sticky")
+                } 
+                else
+                {
+                    navbar.classList.remove("sticky");
+                }
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body 
+            {
+                margin: 0;
+                font: 400 15px Lato, sans-serif;
+                line-height: 1.8;
+                color: #818181;
+                background: url("box1.jpeg")no-repeat fixed center;
+                background-size: cover;
+            }
+            html,body 
+            {
+                height:100%;
+                width:100%;
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            h1 
+            {
+              font-size: 20px;
+              text-transform: fullsize-kana;
+              color: white;
+            }
+            .tab 
+            {
+              overflow: hidden;
+              border: 1px solid #ccc; 
+              background-color: rgba(40,20,30,.5);
+              margin: 10px;
+              width:20%;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .tab button
+            {
+              background-color: inherit;
+              float: left;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              padding: 14px 16px;
+              transition: 0.3s;
+              font-size: 17px;
+              color: white;
+              text-align: center;
+            }
+            .tab button:hover 
+            {
+              background-color: #1161ee;
+            }
+            .tab button.active 
+            {
+              background-color: black;
+            }
+            .tabcontent
+            {
+              display: none;
+              padding: 6px 12px;
+              border: 1px solid #ccc;
+              border-top: none;
+              height: 10000px;
+            }
+            input[type=text], select, textarea 
+            {
+              width: 100%;
+              padding: 12px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              resize: vertical;
+              color:white;
+              font-size: 20px;
+              text-transform: fullsize-kana;
+            }
+            label 
+            {
+              padding: 12px 12px 12px 0;
+              display: inline-block;
+            }
+            input[type=submit] 
+            {
+              background-color: #1161ee;
+              color: white;
+              padding: 12px 20px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              float: right;
+            }
+            input[type=submit]:hover 
+            {
+              background-color: #007399;
+            }
+            .container 
+            {
+              border-radius: 5px;
+              background-color: rgba(40,20,30,.50);
+              padding: 20px;
+              width: 60%;
+              height: 4%;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            .col-25 
+            {
+              float: left;
+              width: 25%;
+              margin-top: 6px;
+            }
+            .col-75 
+            {
+              float: left;
+              width: 75%;
+              margin-top: 6px;
+            }
+            .row:after 
+            {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            @media screen and (max-width: 600px)
+            {
+              .col-25, .col-75, input[type=submit] 
+              {
+                width: 100%;
+                margin-top: 0;
+              }
+            }
+        </style>
+    </head>
+    <body>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'BOOKING STATUS')">BOOKING STATUS</button>
+        <button class="tablinks" onclick="openCity(event, 'FEEDBACK')">FEEDBACK</button>
+    </div>
+      
+    <div id="BOOKING STATUS" class="tabcontent"><br><br><br><br><br><br><br><br><br>
+    <div class="container">
+        <form method="POST">
+            <div class="row">
+            <div class="col-25">
+                <label for="uname"><h1>USER NAME</h1></label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="user" class="input" style="background-color:rgba(40,20,30,.50);">
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="id"><h1>EMAIL ID</h1></label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="mail" class="input" style="background-color:rgba(40,20,30,.50);">
+            </div>
+            </div>   
+            <div class="row">
+            <div class="col-25">
+                <label for="uevent"><h1>YOUR EVENT</h1></label>
+            </div>
+            <div class="col-75">
+                <select name="event" type="text" class="input" style="background-color:rgba(40,20,30,.50);" required>
+                    <option style="color:white; background-color:rgba(255,255,255,.1);"><b>....SELECT....</b></option>
+                    <option value="wedding"  style="color:white; background-color:rgba(255,255,255,.1);"><b>WEDDING</b></option>
+                    <option value="birthday" style="color:white; background-color:rgba(255,255,255,.1);"><b>BIRTHDAY</b></option>
+                    <option  value= "party" style="color:white; background-color:rgba(255,255,255,.1);"><b>PARTY</b></option>
+                    <option value="gettogether" style="color:white; background-color:rgba(255,255,255,.1);"><b>GET TOGETHER</b></option>
+                </select>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="ustatus"><h1>STATUS</h1></label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="status" class="input" style="background-color:rgba(40,20,30,.50);">
+            </div>
+            </div>    
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    </div>
+        
+    <div id="FEEDBACK" class="tabcontent"><br><br><br><br><br><br><br><br><br>
+    <div class="container">
+        <form method="POST" action="feedback_store">
+            <div class="row">
+            <div class="col-25">
+                <label for="uevent"><h1>YOUR EVENT</h1></label>
+            </div>
+            <div class="col-75">
+                <select name="event" type="text" class="input" style="background-color:rgba(40,20,30,.50);" required>
+                    <option style="color:white; background-color:rgba(255,255,255,.1);"><b>....SELECT....</b></option>
+                    <option value="wedding"  style="color:white; background-color:rgba(255,255,255,.1);"><b>WEDDING</b></option>
+                    <option value="birthday" style="color:white; background-color:rgba(255,255,255,.1);"><b>BIRTHDAY</b></option>
+                    <option  value= "party" style="color:white; background-color:rgba(255,255,255,.1);"><b>PARTY</b></option>
+                    <option value="gettogether" style="color:white; background-color:rgba(255,255,255,.1);"><b>GET TOGETHER</b></option>
+                </select>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="ufeedback"><h1>FEEDBACK</h1></label>
+            </div>
+            <div class="col-75">
+                <textarea id="feedback" name="feedback" placeholder="Write Something..." style="height:200px;background-color:rgba(40,20,30,.50);"></textarea>
+            </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    </div>
+    <script>
+    function openCity(evt, cityName) 
+    {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) 
+      {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) 
+      {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    </script>           
+    </body>
+</html>
+
+
+
+

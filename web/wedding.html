@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <style>
+            body 
+            {
+                margin: 0;
+                font: 400 15px Lato, sans-serif;
+                line-height: 1.8;
+                color: #818181;
+                background: url("wed2.jpg")no-repeat fixed center;
+                background-size: cover;
+            }
+            h1 
+            {
+                font-size: 50px;
+                text-transform: fullsize-kana;
+                color: darkgoldenrod;
+            } 
+            h4 
+            {    
+                text-transform: fullsize-kana;
+                color: darkgoldenrod;
+            }
+            p
+            {
+                text-transform: fullsize-kana;
+                color: darkgoldenrod;
+            }
+            * 
+            {
+              box-sizing: border-box;
+            }
+            .main 
+            {
+              max-width: 1000px;
+              margin: auto;
+            }
+            .row 
+            {
+              margin: 10px -16px;
+            }
+            .row,.row > .column 
+            {
+              padding: 8px;
+            }
+            .column 
+            {
+              float: left;
+              width: 33.33%;
+              display: none; 
+            }
+            .row:after 
+            {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            .content 
+            {
+              background-color: rgba(40,20,30,.6);
+              padding: 10px;
+
+            }
+            .show 
+            {
+              display: block;
+            }
+            .btn 
+            {
+              border: none;
+              outline: none;
+              padding: 12px 16px;
+              background-color: white;
+              cursor: pointer;
+            }
+            .btn:hover 
+            {
+              background-color: #ddd;
+            }
+            .btn.active 
+            {
+              background-color: #666;
+              color: white;
+            }
+            .button 
+            {
+              background-color: darkgoldenrod;
+              border: none;
+              color: black;
+              padding: 10px 20px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              margin: 4px 2px;
+              cursor: pointer;
+              border-radius: 16px;
+            }
+            .button:hover 
+            {
+              background-color: rgba(40,20,30,.60);
+            }
+            .dropdown 
+            {
+              position: relative;
+              display: inline-block;
+            }
+            .dropdown-content
+            {
+              display: none;
+              position: absolute;
+              background-color: #f1f1f1;
+              min-width: 160px;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              z-index: 1;
+            }
+            .dropdown-content a 
+            {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+            }
+            .dropdown-content a:hover
+            {
+                background-color: #ddd;
+            }
+            .dropdown:hover .dropdown-content 
+            {
+                display: block;
+            }
+           
+    </style>
+    </head>
+    <body>
+            <div class="main">
+            <h1><center><b>WEDDING</b></center></h1>
+            <hr>
+
+            <div id="myBtnContainer">
+                <button class="btn active">ALL SERVICES</button>
+                <button class="btn" onclick="filterSelection('stage')">STAGE</button>
+                <button class="btn" onclick="filterSelection('decoration')">DECORATION</button>
+                <button class="btn" onclick="filterSelection('lightsound')">LIGHTS & SOUNDS</button>
+                <button class="btn" onclick="filterSelection('cameravideo')">CAMERA & VIDEO GRAPH</button>
+                <div class="dropdown">
+                    <button class="btn" onclick="filterSelection('catering')">CATERING</button>
+                <div class="dropdown-content">
+                    <a href="#">NON-VEG</a>
+                    <a href="#">VEG</a>
+                    <a href="#">MIXED</a>
+                </div>
+                </div>   
+                <button class="btn" onclick="filterSelection('cake')">CAKES</button>
+                <button class="btn" onclick="filterSelection('makeup')">MAKEUP</button>
+                <button class="btn" onclick="filterSelection('car')">CAR HIRE FOR BRIDE , GROOM & FAMILY</button>
+                <button class="btn" onclick="filterSelection('honeymoon')">HONEY MOON PACKAGES</button>
+            </div>
+
+            <div class="row">   
+            <div class="column stage">
+                <div class="content">
+                <img src="stage5.jpg" style="width:300px; height:200px">
+                <form action="Totals.jsp" method="POST">
+                    <h4>THEME BASED</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 25000/-</p>
+                    <p>SELECTED: <input type="radio" name="select1" id="myCheck1" onchange="showPrice()"  value="25000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p> 
+                </div>
+            </div>
+            <div class="column stage">
+                <div class="content">
+                <img src="wed14.jpg" style="width:300px; height:200px">
+                    <h4>TRADITIONAL</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 50000/-</p>
+                    <p>SELECTED: <input type="radio" name="select1" id="myCheck2" onchange="showPrice()"  value="50000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column stage">
+                <div class="content">
+                <img src="wed15.jpg" style="width:300px; height:200px">
+                    <h4>CONTEMPORARY</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 60000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck3" onchange="showPrice()" value="60000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column stage">
+                <div class="content">
+                <img src="wed17.jpg" style="width:300px; height:200px">
+                    <h4>CONTEMPORARY</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 55000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck4" onchange="showPrice()" value="55000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+              </div>
+            </div>
+            <div class="column stage">
+                <div class="content">
+                <img src="wed25.jpeg" style="width:300px; height:200px">
+                    <h4>TRADITIONAL</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 45000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck5" onchange="showPrice()" value="45000"onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column stage">
+                <div class="content">
+                <img src="wed26.jpg" style="width:300px; height:200px">
+                    <h4>THEME BASED</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 30000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck6" onchange="showPrice()" value="30000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column stage">
+                <div class="content">
+                <img src="wed27.jpg" style="width:300px; height:200px">
+                    <h4>THEME BASED</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 20000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck7" onchange="showPrice()" value="20000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column stage">
+                <div class="content">
+                <img src="wed28.jpg" style="width:300px; height:200px">
+                    <h4>TRADITIONAL</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 35000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck8" onchange="showPrice()" value="35000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column stage">
+                <div class="content">
+                <img src="stage14.jpg" style="width:300px; height:200px">
+                    <h4>CONTEMPORARY</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 55000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck9" onchange="showPrice()" value="55000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>    
+            
+<!--stage-->
+
+            <div class="column decoration">
+                <div class="content">
+                <img src="wed3.jpg" style="width:300px; height:200px">
+                    <h4>FLOWER</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 1000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck10" onchange="showPrice()" value="1000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column decoration">
+                <div class="content">
+                <img src="wed6.jpg" style="width:300px; height:200px">
+                    <h4>FLOWER & LIGHT</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 5000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck11" onchange="showPrice()" value="5000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column decoration">
+                <div class="content">
+                <img src="wed8.jpg" style="width:300px; height:200px">
+                    <h4>FLOWER</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 3000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck12" onchange="showPrice()" value="3000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column decoration">
+                <div class="content">
+                <img src="wed16.jpg" style="width:300px; height:200px">
+                    <h4>FLOWER</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 9000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck13" onchange="showPrice()" value="9000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column decoration">
+                <div class="content">
+                <img src="wed20.jpg" style="width:300px; height:200px">
+                    <h4>FLOWER</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 5000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck14" onchange="showPrice()" value="5000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column decoration">
+                <div class="content">
+                <img src="wed23.jpg" style="width:300px; height:200px">
+                    <h4>FLOWER & LIGHT</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 10000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck15" onchange="showPrice()" value="10000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+    
+<!--decoration-->
+
+            <div class="column lightsound">
+                <div class="content">
+                <img src="light1.jpeg" style="width:300px; height:200px">
+                    <h4>COLOR LIGHTS & SOUNDS</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 1200/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck16" onchange="showPrice()" value="1200" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+          </div>
+          <div class="column lightsound">
+                <div class="content">
+                <img src="light3.jpg" style="width:300px; height:200px">
+                    <h4>LIGHTS & SOUNDS</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 1600/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck17" onchange="showPrice()" value="1600" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+          </div>
+          <div class="column lightsound">
+                <div class="content">
+                <img src="light6.jfif" style="width:300px; height:200px">
+                    <h4>L E D LIGHTS & SOUNDS</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 1000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck18" onchange="showPrice()" value="1000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+          </div>
+          <div class="column lightsound">
+                <div class="content">
+                <img src="light9.jpg" style="width:300px; height:200px">
+                    <h4>LIGHTS & SOUNDS</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 2000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck19" onchange="showPrice()" value="2000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+          </div>
+          <div class="column lightsound">
+                <div class="content">
+                <img src="light10.jpg" style="width:300px; height:200px">
+                    <h4>LIGHTS & SOUNDS</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 1450/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck20" onchange="showPrice()" value="1450" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+          </div>
+          <div class="column lightsound">
+                <div class="content">
+                <img src="light16.jfif" style="width:300px; height:200px">
+                    <h4>LIGHTS & SOUNDS</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 1250/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck21" onchange="showPrice()" value="1250" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+          </div>  
+  
+<!--lightsound-->
+
+           <div class="column cameravideo">
+                <div class="content">
+                <img src="h1.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 10000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck22" onchange="showPrice()" value="10000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+           </div>
+           <div class="column cameravideo">
+                <div class="content">
+                <img src="h2.jpg" style="width:300px; height:200px">
+                  <h4>CAMERA & VIDEO GRAPH</h4>
+                  <p><i class='fas fa-rupee-sign'></i> 80000/-</p>
+                  <p>SELECTED: <input type="radio"  name="select1"  id="myCheck23" onchange="showPrice()" value="8000" onclick="myFunction()"></p>
+                  <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+           </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="h3.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 7000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck24" onchange="showPrice()" value="7000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+           </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="h4.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 5000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck25" onchange="showPrice()" value="5000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="h5.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 3500/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck26" onchange="showPrice()" value="3500" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="h6.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 7000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck27" onchange="showPrice()" value="7000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="h7.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 8000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck28" onchange="showPrice()" value="8000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="h8.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 2900/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck29" onchange="showPrice()" value="2900" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>    
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="h9.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 3000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck30" onchange="showPrice()" value="3000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="m1.jpeg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 20000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck31" onchange="showPrice()" value="20000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+           </div>
+           <div class="column cameravideo">
+                <div class="content">
+                <img src="m2.jpg" style="width:300px; height:200px">
+                  <h4>CAMERA & VIDEO GRAPH</h4>
+                  <p><i class='fas fa-rupee-sign'></i> 9000/-</p>
+                  <p>SELECTED: <input type="radio"  name="select1"  id="myCheck32" onchange="showPrice()" value="9000" onclick="myFunction()"></p>
+                  <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+           </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="m3.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 33000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck33" onchange="showPrice()" value="33000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+           </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="m4.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 3500/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck34" onchange="showPrice()" value="3500" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="m5.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 1400/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck35" onchange="showPrice()" value="1400" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="m6.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 3650/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck36" onchange="showPrice()" value="3650" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="m7.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 1800/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck37" onchange="showPrice()" value="1800" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="m8.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 3800/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck38" onchange="showPrice()" value="3800" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div> 
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="m9.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 22000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck39" onchange="showPrice()" value="22000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>    
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="p1.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 16000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck40" onchange="showPrice()" value="16000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="p2.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 10000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck41" onchange="showPrice()" value="10000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+           </div>
+           <div class="column cameravideo">
+                <div class="content">
+                <img src="p3.jpg" style="width:300px; height:200px">
+                  <h4>CAMERA & VIDEO GRAPH</h4>
+                  <p><i class='fas fa-rupee-sign'></i> 12000/-</p>
+                  <p>SELECTED: <input type="radio"  name="select1"  id="myCheck42" onchange="showPrice()" value="12000" onclick="myFunction()"></p>
+                  <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+           </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="p4.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 16000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck43" onchange="showPrice()" value="16000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+           </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="p5.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 11000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck44" onchange="showPrice()" value="11000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="p6.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 12000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck45" onchange="showPrice()" value="12000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="p7.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 16000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck46" onchange="showPrice()" value="16000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="p8.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 10000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck47" onchange="showPrice()" value="10000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column cameravideo">
+                <div class="content">
+                <img src="p9.jpg" style="width:300px; height:200px">
+                    <h4>CAMERA & VIDEO GRAPH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 18000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck48" onchange="showPrice()" value="18000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>    
+            
+ <!--cameravideo-->
+ 
+            <div class="column catering">
+                <div class="content">
+                <img src="food1.jpg" style="width:300px; height:200px">
+                    <h4>CATERING</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 5000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck49" onchange="showPrice()" value="5000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+          </div>
+          <div class="column catering">
+                <div class="content">
+                <img src="food8.jpg" style="width:300px; height:200px">
+                    <h4>CATERING</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 9000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck50" onchange="showPrice()" value="9000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+          </div>
+          <div class="column catering">
+                <div class="content">
+                <img src="food11.jpeg" style="width:300px; height:200px">
+                    <h4>CATERING</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 8500/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck51" onchange="showPrice()" value="8500" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+              </div>
+          </div>
+            <div class="column catering">
+                <div class="content">
+                <img src="food17.jpg" style="width:300px; height:200px">
+                    <h4>CATERING</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 5400/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck52" onchange="showPrice()" value="5400" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+          </div>
+          <div class="column catering">
+                <div class="content">
+                <img src="food18.jpg" style="width:300px; height:200px">
+                    <h4>CATERING</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 5500/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck53" onchange="showPrice()" value="5500" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+          </div>
+            <div class="column catering">
+                <div class="content">
+                <img src="wed7.jpg" style="width:300px; height:200px">
+                    <h4>CATERING</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 1900/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck54" onchange="showPrice()" value="1900" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+          </div>
+  
+<!--catering-->
+
+            <div class="column cake">
+                <div class="content">
+                <img src="cake4.jpg" style="width:300px; height:200px">
+                    <h4>VANILLA CAKES</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 1000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck55" onchange="showPrice()" value="1000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+          </div>
+          <div class="column cake">
+                <div class="content">
+                <img src="cake8.jpg" style="width:300px; height:200px">
+                    <h4>FRESH CREAM CAKES</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 1500/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck56" onchange="showPrice()" value="1500" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+          </div>
+            <div class="column cake">
+                <div class="content">
+                <img src="cake12.jpg" style="width:300px; height:200px">
+                    <h4>WHITE FOREST CAKES</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 1250/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck57" onchange="showPrice()" value="1250" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column cake">
+                <div class="content">
+                <img src="cake18.jpg" style="width:300px; height:200px">
+                    <h4>RED VELVET CAKES</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 1950/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck58" onchange="showPrice()" value="1950" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column cake">
+                <div class="content">
+                <img src="cake20.jpg" style="width:300px; height:200px">
+                    <h4>BLACK FOREST CAKES</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 1000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck59" onchange="showPrice()" value="1000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column cake">
+                <div class="content">
+                <img src="cake24.jpg" style="width:300px; height:200px">
+                    <h4>RED WHITE MIX CAKES</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 2000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck60" onchange="showPrice()" value="2000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+                
+<!--cake-->
+
+            <div class="column makeup">
+                <div class="content">
+                <img src="makeup1.jpg" style="width:300px; height:200px">
+                    <h4>CHRISTIAN</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 10000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck61" onchange="showPrice()" value="1000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+          </div>
+          <div class="column makeup">
+                <div class="content">
+                <img src="makeup2.jpg" style="width:300px; height:200px">
+                    <h4>HINDU</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 6000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck62" onchange="showPrice()" value="6000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+          </div>
+            <div class="column makeup">
+                <div class="content">
+                <img src="makeup3.jpg" style="width:300px; height:200px">
+                    <h4>NORTH TOUCH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 3500/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck63" onchange="showPrice()" value="3500" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column makeup">
+                <div class="content">
+                <img src="makeup4.jpg" style="width:300px; height:200px">
+                    <h4>CHRISTIAN</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 4000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck64" onchange="showPrice()" value="4000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column makeup">
+                <div class="content">
+                <img src="makeup5.PNG" style="width:300px; height:200px">
+                    <h4>HINDU</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 6500/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck65" onchange="showPrice()" value="6500" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column makeup">
+                <div class="content">
+                <img src="makeup6.jpg" style="width:300px; height:200px">
+                    <h4>HINDU</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 8000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck66" onchange="showPrice()" value="8000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div> 
+             <div class="column makeup">
+                <div class="content">
+                <img src="makeup7.jpg" style="width:300px; height:200px">
+                    <h4>NORTH TOUCH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 9500/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck67" onchange="showPrice()" value="9500" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div> 
+             <div class="column makeup">
+                <div class="content">
+                <img src="makeup8.jpg" style="width:300px; height:200px">
+                    <h4>NORTH TOUCH</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 6500/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck68" onchange="showPrice()" value="6500" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column makeup">
+                <div class="content">
+                <img src="makeup9.jpeg" style="width:300px; height:200px">
+                    <h4>MUSLIM</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 6900/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck69" onchange="showPrice()" value="6900" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column makeup">
+                <div class="content">
+                <img src="makeup10.jpg" style="width:300px; height:200px">
+                    <h4>MUSLIM</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 7000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck70" onchange="showPrice()" value="7000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+             <div class="column makeup">
+                <div class="content">
+                <img src="makeup11.jfif" style="width:300px; height:200px">
+                    <h4>MUSLIM</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 7500/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck71" onchange="showPrice()" value="7500" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>   
+             <div class="column makeup">
+                <div class="content">
+                <img src="makeup12.jpg" style="width:300px; height:200px">
+                    <h4>CHRISTIAN</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 8000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck72" onchange="showPrice()" value="8000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div> 
+             
+<!--makeup-->
+
+                <div class="column car">
+                <div class="content">
+                <img src="car1.jpg" style="width:300px; height:200px">
+                    <h4>AUDI</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 10000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck73" onchange="showPrice()" value="10000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+             <div class="column car">
+                <div class="content">
+                <img src="car2.jpg" style="width:300px; height:200px">
+                    <h4>BENZ</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 15000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck74" onchange="showPrice()" value="15000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>   
+             <div class="column car">
+                <div class="content">
+                <img src="car3.jpg" style="width:300px; height:200px">
+                    <h4>JAGUAR</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 20000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck75" onchange="showPrice()" value="20000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div> 
+                
+<!--car-->
+
+             <div class="column honeymoon">
+                <div class="content">
+                <img src="andaman nicobar.jpg" style="width:300px; height:200px">
+                    <h4>ANDAMAN NICOBAR</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 20000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck76" onchange="showPrice()" value="20000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>   
+             <div class="column honeymoon">
+                <div class="content">
+                <img src="dal lake.jpg" style="width:300px; height:200px">
+                    <h4>DAL LAKE</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 10000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck77" onchange="showPrice()" value="10000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+            <div class="column honeymoon">
+                <div class="content">
+                <img src="goa.jpg" style="width:300px; height:200px">
+                    <h4>GOA</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 10000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck78" onchange="showPrice()" value="10000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+             <div class="column honeymoon">
+                <div class="content">
+                <img src="havelock island.jpg" style="width:300px; height:200px">
+                    <h4>HAVELOCK ISLAND</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 9000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck79" onchange="showPrice()" value="9000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div> 
+            <div class="column honeymoon">
+                <div class="content">
+                <img src="jammu kashmir.jpg" style="width:300px; height:200px">
+                    <h4>JAMMU KASHMIR</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 12000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck80" onchange="showPrice()" value="12000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div> 
+             <div class="column honeymoon">
+                <div class="content">
+                <img src="rajasthan.jpg" style="width:300px; height:200px">
+                    <h4>RAJASTHAN</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 10000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck81" onchange="showPrice()" value="10000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+             <div class="column honeymoon">
+                <div class="content">
+                <img src="shillong.jfif" style="width:300px; height:200px">
+                    <h4>SHILLONG</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 19000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck82" onchange="showPrice()" value="19000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+             <div class="column honeymoon">
+                <div class="content">
+                <img src="bora.jpg" style="width:300px; height:200px">
+                    <h4>BORA</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 10000/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck83" onchange="showPrice()" value="10000" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div>
+             <div class="column honeymoon">
+                <div class="content">
+                <img src="las vegas.jpg" style="width:300px; height:200px">
+                    <h4>LAS VEGAS</h4>
+                    <p><i class='fas fa-rupee-sign'></i> 18500/-</p>
+                    <p>SELECTED: <input type="radio"  name="select1"  id="myCheck84" onchange="showPrice()" value="18500" onclick="myFunction()"></p>
+                    <p><input type="submit" class="button" value="DONE"></p>
+                </div>
+            </div> 
+            </form>
+                
+<!--honeymoon-->
+
+        </div>
+        </div>
+        <script>
+            
+         var gt=0;  
+        function showPrice()
+        {
+            var c = document.getElementById("myCheck1").value;
+            if(stage.checked)
+            {
+                gt+=stage.value;
+                
+            }
+            window.alert("YOU HAVE SELECTED $" + c);
+            window.alert("GRANT TOTAL $" + gt);
+        }
+        function myFunction() 
+        {
+          var checkBox = document.getElementById("myCheck");
+          var text = document.getElementById("text");
+          if (checkBox.checked == true)
+          {
+            text.style.display = "block";
+          }
+          else 
+          {
+             text.style.display = "none";
+          }
+        }
+        </script>
+        <script>
+        filterSelection("all")
+        function filterSelection(c) 
+        {
+          var x, i;
+          x = document.getElementsByClassName("column");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) 
+          {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        function w3AddClass(element, name) 
+        {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) 
+          {
+            if (arr1.indexOf(arr2[i]) == -1) 
+            {
+                element.className += " " + arr2[i];
+            }
+          }
+        }
+        function w3RemoveClass(element, name) 
+        {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++)
+          {
+            while (arr1.indexOf(arr2[i]) > -1) 
+            {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) 
+        {
+          btns[i].addEventListener("click", function()
+          {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+        </script>            
+    </body>
+</html>
+    
+
+
+
+
+
+
+ 
+
