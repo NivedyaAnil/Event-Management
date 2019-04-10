@@ -11,17 +11,23 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-       <% 
-           int stage;
-           int decoration;
-           int lightsound;
-           int cameravideo;
-           int catering;
-           int cake;
-           int makeup;
-           int car;
-           int honeymoon;
- 
+        
+        
+        <%!   
+             int stage=0;
+           int decoration=0;
+           int lightsound=0;
+           int cameravideo=0;
+           int catering=0;
+           int cake=0;
+           int makeup=0;
+           int car=0;
+           int honeymoon=0;
+           int total=0;
+        %>  
+       
+         
+        <% 
            String stage1 = request.getParameter("stage1");
            String dec1 = request.getParameter("dec1");
            String light1 = request.getParameter("light1");
@@ -31,11 +37,9 @@
            String makeup1 = request.getParameter("makeup1");
            String car1 = request.getParameter("car1");
            String honey1 = request.getParameter("honey1");
+           String submit=request.getParameter("sub");
            
-           
-           
-           
-           out.println(stage1);
+      
            
             if(stage1!=null)
             {
@@ -802,6 +806,28 @@
                           + "</script>");
                 } 
             }
+        
+     
        %>
+      
+
+        <% 
+            if(submit!=null)
+            {
+                total=stage+decoration+lightsound+cameravideo+catering+cake+makeup+honeymoon;
+
+        //      alert("${variable}");
+              
+     /*         out.println("<script type='text/javascript'>"
+                          + "window.alert(${total});"
+                          + "location.replace('wedding.html');"
+                          + "</script>");*/
+       
+                out.write("alert('Hello+" + total + "')");
+   
+            }
+
+        %>  
+       
     </body>
 </html>
