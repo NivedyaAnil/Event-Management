@@ -181,7 +181,9 @@ and open the template in the editor.
                 <button class="btn" onclick="filterSelection('car')">CAR HIRE FOR BRIDE , GROOM & FAMILY</button>
                 <button class="btn" onclick="filterSelection('honeymoon')">HONEY MOON PACKAGES</button>
             </div>
-            <input type="submit" class="buttonsub" value="SUBMIT">
+            
+            <input type="button" onclick="Bill.html"
+            
             <div class="row">   
             <div class="column stage">
                 <div class="content">
@@ -970,34 +972,7 @@ and open the template in the editor.
 
         </div>
         </div>
-        <script>
-            
-         var gt=0;  
-        function showPrice()
-        {
-            var c = document.getElementById("myCheck1").value;
-            if(stage.checked)
-            {
-                gt+=stage.value;
-                
-            }
-            window.alert("YOU HAVE SELECTED $" + c);
-            window.alert("GRANT TOTAL $" + gt);
-        }
-        function myFunction() 
-        {
-          var checkBox = document.getElementById("myCheck");
-          var text = document.getElementById("text");
-          if (checkBox.checked == true)
-          {
-            text.style.display = "block";
-          }
-          else 
-          {
-             text.style.display = "none";
-          }
-        }
-        </script>
+        
         <script>
         filterSelection("all")
         function filterSelection(c) 
