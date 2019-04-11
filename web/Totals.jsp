@@ -14,7 +14,7 @@
         
         
         <%!   
-             int stage=0;
+           int stage=0;
            int decoration=0;
            int lightsound=0;
            int cameravideo=0;
@@ -810,20 +810,452 @@
      
        %>
       
+       	 
+        <% 
+           String stage2 = request.getParameter("stage2");
+           String dec2 = request.getParameter("dec2");
+           String light2 = request.getParameter("light2");
+           String camera2 = request.getParameter("camera2");
+           String cater2 = request.getParameter("cater2");
+           String cake2 = request.getParameter("cake2");           
+           
+            if(stage2!=null)
+            {
+                if(stage2.equals("5000"))
+                {
+                     stage=5000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 5000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }    
+                else if(stage2.equals("6000"))
+                {
+                     stage=6000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 6000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(stage2.equals("5500"))
+                {
+                     stage=5500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 5500');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(stage2.equals("3000"))
+                {
+                     stage=3000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 3000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(stage2.equals("3500"))
+                {
+                     stage=3500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 3500');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(stage2.equals("5000"))
+                {
+                     stage=5000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 5000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(stage2.equals("6000"))
+                {
+                     stage=6000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 6000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(stage2.equals("6200"))
+                {
+                     stage=6200;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 6200');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(stage2.equals("7500"))
+                {
+                     stage=7500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 7500');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }               
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                } 
+            }
+            
+            if(dec2!=null)
+            {
+                if(dec2.equals("2000"))
+                {
+                     decoration=2000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 2000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }    
+                else if(dec2.equals("2000"))
+                {
+                     decoration=2000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 2000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(dec2.equals("1500"))
+                {
+                     decoration=1500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 1500');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(dec2.equals("2000"))
+                {
+                     decoration=2000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 2000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(dec2.equals("2400"))
+                {
+                     decoration=2400;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 2400');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(dec2.equals("2500"))
+                {
+                     decoration=2500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 2500');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                } 
+            }
+            
+            if(light2!=null)
+            {
+                if(light2.equals("1000"))
+                {
+                     lightsound=1000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 1000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }    
+                else if(light2.equals("1500"))
+                {
+                     lightsound=1500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 1500');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(light2.equals("2000"))
+                {
+                     lightsound=2000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 2000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(light2.equals("2400"))
+                {
+                     lightsound=2400;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 2400');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(light2.equals("1200"))
+                {
+                     lightsound=1200;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 1200');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(light2.equals("1000"))
+                {
+                     lightsound=1000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 1000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                } 
+            }
+            
+            if(camera2!=null)
+            {
+                if(camera2.equals("5000"))
+                {
+                     cameravideo=5000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 5000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }    
+                else if(camera2.equals("2500"))
+                {
+                     cameravideo=2500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 2500');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(camera2.equals("3000"))
+                {
+                     cameravideo=3000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 3000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(camera2.equals("4000"))
+                {
+                     cameravideo=4000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 4000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(camera2.equals("4100"))
+                {
+                     cameravideo=4100;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 4100');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(camera2.equals("5000"))
+                {
+                     cameravideo=5000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 5000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }                
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                } 
+            }
+            
+            if(cater2!=null)
+            {
+                if(cater2.equals("3500"))
+                {
+                     catering=3500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 3500');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }    
+                else if(cater2.equals("4000"))
+                {
+                     catering=4000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 4000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(cater2.equals("4500"))
+                {
+                     catering=4500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 4500');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(cater2.equals("3200"))
+                {
+                     catering=3200;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 3200');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(cater2.equals("3500"))
+                {
+                     catering=3500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 3500');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(cater2.equals("3000"))
+                {
+                     catering=3000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 3000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                } 
+            }
+            
+            if(cake2!=null)
+            {
+                if(cake2.equals("1000"))
+                {
+                     cake=1000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAKE PRICE IS 1000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }    
+                else if(cake2.equals("1200"))
+                {
+                     cake=1200;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAKE PRICE IS 1200');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(cake2.equals("1000"))
+                {
+                     cake=1000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAKE PRICE IS 1000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(cake2.equals("1500"))
+                {
+                     cake=1500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAKE PRICE IS 1500');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(cake2.equals("2000"))
+                {
+                     cake=2000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAKE PRICE IS 2000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(cake2.equals("1900"))
+                {
+                     cake=1900;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAKE PRICE IS 1900');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(cake2.equals("1000"))
+                {
+                     cake=1000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAKE PRICE IS 1000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(cake2.equals("2000"))
+                {
+                     cake=2000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAKE PRICE IS 2000');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else if(cake2.equals("2200"))
+                {
+                     cake=2200;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAKE PRICE IS 2200');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                }
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('birthday.html');"
+                          + "</script>");
+                } 
+            }
+            
+            
+     
+       %>
+
 
         <% 
+            String wedtotal;
             if(submit!=null)
             {
+                out.println(stage);
+                out.println(decoration);
+                out.println(lightsound);
+                out.println(cameravideo);
+                out.println(catering);
+                out.println(cake);
+                out.println(makeup);
+                out.println(honeymoon);
+                
                 total=stage+decoration+lightsound+cameravideo+catering+cake+makeup+honeymoon;
 
         //      alert("${variable}");
               
-     /*         out.println("<script type='text/javascript'>"
+        /*      out.println("<script type='text/javascript'>"
                           + "window.alert(${total});"
                           + "location.replace('wedding.html');"
-                          + "</script>");*/
+                          + "</script>");
+        */
        
                 out.write("alert('Hello+" + total + "')");
+                String t=String.valueOf(total);
+                out.println(t);
+                out.println("<script type='text/javascript'>"
+                          + "alert('total='+t);"
+                         
+                          + "</script>");
    
             }
 
