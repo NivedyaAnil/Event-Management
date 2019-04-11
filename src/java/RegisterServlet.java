@@ -63,8 +63,16 @@ public class RegisterServlet extends HttpServlet {
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Event","root","");
                 PreparedStatement ps   =  con.prepareStatement("insert into event_register values(?,?,?,?,?,?,?,?)");
-                
-                
+                PreparedStatement ps1   =  con.prepareStatement("select COUNT(*) as rc  from event_register where DATE_TIME='2019-12-28'");
+                ResultSet rs = ps1.executeQuery();
+                rs.next();
+                int count = rs.getInt("rc");
+                rs.close();
+               if(count!=0)
+               {
+                   out.println("DATE IS ALREADY BOOKED");
+               }
+                 
                 ps.setString(1,name);
                 ps.setString(2,event);
                 ps.setInt(3,nop);
@@ -150,5 +158,9 @@ public class RegisterServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    private void alert(String booked) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }
