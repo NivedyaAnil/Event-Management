@@ -23,6 +23,8 @@
            int makeup=0;
            int car=0;
            int honeymoon=0;
+           int dj=0;
+           int lanterns=0;
            int total=0;
         %>  
        
@@ -38,9 +40,7 @@
            String car1 = request.getParameter("car1");
            String honey1 = request.getParameter("honey1");
            String submit=request.getParameter("sub");
-           
-      
-           
+   
             if(stage1!=null)
             {
                 if(stage1.equals("25000"))
@@ -810,7 +810,7 @@
      
        %>
       
-       	 
+<!--wed-->       	 
         <% 
            String stage2 = request.getParameter("stage2");
            String dec2 = request.getParameter("dec2");
@@ -1220,11 +1220,876 @@
                           + "</script>");
                 } 
             }
+       %>
+ 
+<!--birth-->
+
+       <% 
+           String stage3 = request.getParameter("stage3");
+           String dec3 = request.getParameter("dec3");
+           String light3 = request.getParameter("light3");
+           String dj3 = request.getParameter("dj3");
+           String camera3 = request.getParameter("camera3");
+           String cater3 = request.getParameter("cater3");           
+           
+            if(stage3!=null)
+            {
+                if(stage3.equals("5000"))
+                {
+                     stage=5000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 5000');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }    
+                else if(stage3.equals("1300"))
+                {
+                     stage=1300;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 1300');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(stage3.equals("14000"))
+                {
+                     stage=14000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 14000');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(stage3.equals("13500"))
+                {
+                     stage=13500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 13500');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(stage3.equals("9000"))
+                {
+                     stage=9000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 9000');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(stage3.equals("12000"))
+                {
+                     stage=12000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 12000');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }  
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                } 
+            }
             
+            if(dec3!=null)
+            {
+                if(dec3.equals("2000"))
+                {
+                     decoration=2000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 2000');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }    
+                else if(dec3.equals("1000"))
+                {
+                     decoration=1000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 1000');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(dec3.equals("2500"))
+                {
+                     decoration=2500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 2500');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(dec3.equals("3000"))
+                {
+                     decoration=3000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 3000');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(dec3.equals("2500"))
+                {
+                     decoration=2500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 2500');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(dec3.equals("3000"))
+                {
+                     decoration=3000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 3000');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                } 
+            }
             
-     
+            if(light3!=null)
+            {
+                if(light3.equals("1500"))
+                {
+                     lightsound=1500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 1500');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }    
+                else if(light3.equals("1900"))
+                {
+                     lightsound=1900;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 1900');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(light3.equals("2000"))
+                {
+                     lightsound=2000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 2000');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(light3.equals("2500"))
+                {
+                     lightsound=2500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 2500');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(light3.equals("1500"))
+                {
+                     lightsound=1500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 1500');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(light3.equals("1000"))
+                {
+                     lightsound=1000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 1000');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                } 
+            }
+            
+	    if(dj3!=null)
+            {
+                if(dj3.equals("2000"))
+                {
+                     dj=2000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DJ PRICE IS 2000');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }    
+                else if(dj3.equals("1500"))
+                {
+                     dj=1500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DJ PRICE IS 1500');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(dj3.equals("2900"))
+                {
+                     dj=2900;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DJ PRICE IS 2900');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(dj3.equals("2000"))
+                {
+                     dj=2000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DJ PRICE IS 2000');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(dj3.equals("2400"))
+                {
+                     dj=2400;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DJ PRICE IS 2400');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(dj3.equals("2000"))
+                {
+                     dj=2000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DJ PRICE IS 2000');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                } 
+            }
+
+            if(camera3!=null)
+            {
+                if(camera3.equals("3000"))
+                {
+                     cameravideo=3000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 3000');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }    
+                else if(camera3.equals("3000"))
+                {
+                     cameravideo=3000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 3000');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(camera3.equals("3000"))
+                {
+                     cameravideo=3000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 3000');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(camera3.equals("3500"))
+                {
+                     cameravideo=3500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 3500');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(camera3.equals("4100"))
+                {
+                     cameravideo=4100;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 4100');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(camera3.equals("3500"))
+                {
+                     cameravideo=3500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 3500');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                } 
+            }
+            
+            if(cater3!=null)
+            {
+                if(cater3.equals("1500"))
+                {
+                     catering=1500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 1500');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }    
+                else if(cater3.equals("5000"))
+                {
+                     catering=5000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 5000');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(cater3.equals("4500"))
+                {
+                     catering=4500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 4500');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(cater3.equals("2500"))
+                {
+                     catering=2500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 2500');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(cater3.equals("2900"))
+                {
+                     catering=2900;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 2900');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else if(cater3.equals("1500"))
+                {
+                     catering=1500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 1500');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                }
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('party.html');"
+                          + "</script>");
+                } 
+            }
+  
        %>
 
+<!--party-->
+
+       <% 
+           String stage4 = request.getParameter("stage4");
+           String dec4 = request.getParameter("dec4");
+           String light4 = request.getParameter("light4");
+           String dj4 = request.getParameter("dj4");
+           String lanterns4=request.getParameter("lanterns4");
+           String camera4 = request.getParameter("camera4");
+           String cater4 = request.getParameter("cater4");
+           String cake4 = request.getParameter("cake4");
+           
+            if(stage4!=null)
+            {
+                if(stage4.equals("11000"))
+                {
+                     stage=11000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 11000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }    
+                else if(stage4.equals("10000"))
+                {
+                     stage=10000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 10000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(stage4.equals("9000"))
+                {
+                     stage=9000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 9000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(stage4.equals("5000"))
+                {
+                     stage=55000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 55000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(stage4.equals("8000"))
+                {
+                     stage=8000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 8000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(stage4.equals("7500"))
+                {
+                     stage=7500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 7500');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(stage4.equals("7000"))
+                {
+                     stage=7000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 7000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(stage4.equals("6200"))
+                {
+                     stage=6200;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 6200');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(stage4.equals("6000"))
+                {
+                     stage=6000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR STAGE PRICE IS 6000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }               
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                } 
+            }
+            
+            if(dec4!=null)
+            {
+                if(dec4.equals("2000"))
+                {
+                     decoration=2000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 2000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }    
+                else if(dec4.equals("2500"))
+                {
+                     decoration=2500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 2500');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(dec4.equals("2000"))
+                {
+                     decoration=2000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 2000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(dec4.equals("1900"))
+                {
+                     decoration=1900;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 1900');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(dec4.equals("2500"))
+                {
+                     decoration=2500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 2500');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(dec4.equals("2000"))
+                {
+                     decoration=2000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DECORATION PRICE IS 2000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                } 
+            }
+            
+            if(light4!=null)
+            {
+                if(light4.equals("4500"))
+                {
+                     lightsound=4500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 4500');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }    
+                else if(light4.equals("2500"))
+                {
+                     lightsound=2500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 2500');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(light4.equals("3500"))
+                {
+                     lightsound=3500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 3500');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(light4.equals("4000"))
+                {
+                     lightsound=4000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 4000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(light4.equals("3700"))
+                {
+                     lightsound=3700;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 3700');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(light4.equals("3500"))
+                {
+                     lightsound=3500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LIGHT SOUND PRICE IS 3500');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                } 
+            }
+            
+	    if(dj4!=null)
+            {
+                if(dj4.equals("4200"))
+                {
+                     dj=4200;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DJ PRICE IS 4200');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }    
+                else if(dj4.equals("4000"))
+                {
+                     dj=4000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DJ PRICE IS 4000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(dj4.equals("2000"))
+                {
+                     dj=2000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DJ PRICE IS 2000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(dj4.equals("2500"))
+                {
+                     dj=2500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DJ PRICE IS 2500');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(dj4.equals("3000"))
+                {
+                     dj=3000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DJ PRICE IS 3000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(dj4.equals("4000"))
+                {
+                     dj=4000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR DJ PRICE IS 4000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                } 
+            }
+
+	    if(lanterns4!=null)
+            {
+                if(lanterns4.equals("1900"))
+                {
+                     lanterns=1900;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LANTERNS PRICE IS 1900');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }    
+                else if(lanterns4.equals("1500"))
+                {
+                     lanterns=1500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LANTERNS PRICE IS 1500');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(lanterns4.equals("2500"))
+                {
+                     lanterns=2500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LANTERNS PRICE IS 2500');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }   
+                else if(lanterns4.equals("1000"))
+                {
+                     lanterns=1000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LANTERNS PRICE IS 1000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }  
+                else if(lanterns4.equals("1500"))
+                {
+                     lanterns=1500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR LANTERNS PRICE IS 1500');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }  
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                } 
+            }
+
+            if(camera4!=null)
+            {
+                if(camera4.equals("4000"))
+                {
+                     cameravideo=4000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 4000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }    
+                else if(camera4.equals("4200"))
+                {
+                     cameravideo=4200;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 4200');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(camera4.equals("3000"))
+                {
+                     cameravideo=3000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 3000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(camera4.equals("6000"))
+                {
+                     cameravideo=6000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 6000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(camera4.equals("4000"))
+                {
+                     cameravideo=4000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 4000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(camera4.equals("6000"))
+                {
+                     cameravideo=6000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 6000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                } 
+            }
+            
+            if(cater4!=null)
+            {
+                if(cater4.equals("4000"))
+                {
+                     catering=4000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 4000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }    
+                else if(cater4.equals("3000"))
+                {
+                     catering=3000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 3000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(cater4.equals("2500"))
+                {
+                     catering=2500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 2500');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(cater4.equals("3000"))
+                {
+                     catering=3000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 3000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(cater4.equals("4500"))
+                {
+                     catering=4500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 4500');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(cater4.equals("4000"))
+                {
+                     catering=4000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CATERING PRICE IS 4000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                } 
+            }
+            
+            if(cake4!=null)
+            {
+                if(cake4.equals("1900"))
+                {
+                     cake=1900;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAKE PRICE IS 1900');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }    
+                else if(cake4.equals("1000"))
+                {
+                     cake=1200;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAKE PRICE IS 1200');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(cake4.equals("1500"))
+                {
+                     cake=1500;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAKE PRICE IS 1500');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(cake4.equals("1200"))
+                {
+                     cake=1200;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAKE PRICE IS 1200');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(cake4.equals("1000"))
+                {
+                     cake=1000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAKE PRICE IS 1000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else if(cake4.equals("2000"))
+                {
+                     cake=2000;
+                     out.println("<script type='text/javascript'>"
+                          + "alert('YOUR CAKE PRICE IS 2000');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                }
+                else
+                {
+                    out.println("<script type='text/javascript'>"
+                          + "alert('PLEASE SELECT!');"
+                          + "location.replace('gettogether.html');"
+                          + "</script>");
+                } 
+            }
+       %>
+
+<!--get-->
 
         <% 
             String wedtotal;
@@ -1249,7 +2114,7 @@
                           + "</script>");
         */
        
-                out.write("alert('Hello+" + total + "')");
+                out.write("alert('TOTAL PRICE+" + total + "')");
                 String t=String.valueOf(total);
                 out.println(t);
                 out.println("<script type='text/javascript'>"
