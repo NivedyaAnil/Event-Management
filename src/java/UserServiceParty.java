@@ -80,8 +80,7 @@ public class UserServiceParty extends HttpServlet {
                     String cameravideoprice = rs.getString(10);
                     String catering = rs.getString(11);
                     String cateringprice = rs.getString(12);
-                    
-                    
+
  
                     out.println("<tr align=center >"+ "<td >" +stage+"<td width ='20%' >"+stageprice+"<td > "+decoration+"<td > "+ decorationprice +" <td > "+lightsound+"<td > "+lightsoundprice+"<td > "+dj+"<td > "+djprice+"<td > "+cameravideo+"<td > "+cameravideoprice+"<td > "+catering+"<td > "+cateringprice+"<td >  </tr>");
                     out.println("<br>");
