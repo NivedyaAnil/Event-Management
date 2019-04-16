@@ -70,7 +70,7 @@ and open the template in the editor.
               border-top: none;
               height: 10000px;
             }
-            input[type=text], select, textarea 
+            input[type=text], select, textarea, [type=date], [type=email]
             {
               width: 100%;
               padding: 12px;
@@ -106,7 +106,7 @@ and open the template in the editor.
               background-color: rgba(40,20,30,.50);
               padding: 20px;
               width: 60%;
-              height: 4%;
+              height: 8%;
               display: block;
               margin-left: auto;
               margin-right: auto;
@@ -141,10 +141,83 @@ and open the template in the editor.
     </head>
     <body>
     <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'UPDATE')">UPDATE</button>
         <button class="tablinks" onclick="openCity(event, 'BOOKING STATUS')">BOOKING STATUS</button>
         <button class="tablinks" onclick="openCity(event, 'FEEDBACK')">FEEDBACK</button>
     </div>
-      
+    
+    <div id="UPDATE" class="tabcontent"><br><br><br><br><br><br><br><br><br>
+    <div class="container">
+        <form method="POST" action="UpdateUser">
+            <div class="row">
+            <div class="col-25">
+                <label for="uname"><h1>YOUR NAME</h1></label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="username" class="input" style="background-color:rgba(40,20,30,.50);">
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="uevent"><h1>YOUR EVENT</h1></label>
+            </div>
+            <div class="col-75">
+                <select name="event" type="text" class="input" style="background-color:rgba(40,20,30,.50);" required>
+                    <option style="color:white; background-color:black;"><b>....SELECT....</b></option>
+                    <option value="wedding"  style="color:white; background-color:black;"><b>WEDDING</b></option>
+                    <option value="birthday" style="color:white; background-color:black;"><b>BIRTHDAY</b></option>
+                    <option  value= "party" style="color:white; background-color:black;"><b>PARTY</b></option>
+                    <option value="gettogether" style="color:white; background-color:black;"><b>GET TOGETHER</b></option>
+                </select>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="uname"><h1>NO. OF PERSON</h1></label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="person" class="input" style="background-color:rgba(40,20,30,.50);">
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="uname"><h1>DATE & TIME</h1></label>
+            </div>
+            <div class="col-75">
+                <input type="date" name="dt" class="input" style="background-color:rgba(40,20,30,.50);">
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="id"><h1>EMAIL ID</h1></label>
+            </div>
+            <div class="col-75">
+                <input type="email" name="email" class="input" style="background-color:rgba(40,20,30,.50);">
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="id"><h1>PHONE NUMBER</h1></label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="phone" class="input" style="background-color:rgba(40,20,30,.50);">
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="id"><h1>ADDRESS</h1></label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="add" class="input" style="background-color:rgba(40,20,30,.50);">
+            </div>
+            </div> 
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    </div>    
+        
     <div id="BOOKING STATUS" class="tabcontent"><br><br><br><br><br><br><br><br><br>
     <div class="container">
         <form method="POST">
@@ -202,11 +275,11 @@ and open the template in the editor.
             </div>
             <div class="col-75">
                 <select name="event" type="text" class="input" style="background-color:rgba(40,20,30,.50);" required>
-                    <option style="color:white; background-color:rgba(255,255,255,.1);"><b>....SELECT....</b></option>
-                    <option value="wedding"  style="color:white; background-color:rgba(255,255,255,.1);"><b>WEDDING</b></option>
-                    <option value="birthday" style="color:white; background-color:rgba(255,255,255,.1);"><b>BIRTHDAY</b></option>
-                    <option  value= "party" style="color:white; background-color:rgba(255,255,255,.1);"><b>PARTY</b></option>
-                    <option value="gettogether" style="color:white; background-color:rgba(255,255,255,.1);"><b>GET TOGETHER</b></option>
+                    <option style="color:white; background-color:black;"><b>....SELECT....</b></option>
+                    <option value="wedding"  style="color:white; background-color:black;"><b>WEDDING</b></option>
+                    <option value="birthday" style="color:white; background-color:black;"><b>BIRTHDAY</b></option>
+                    <option  value= "party" style="color:white; background-color:black;"><b>PARTY</b></option>
+                    <option value="gettogether" style="color:white; background-color:black;"><b>GET TOGETHER</b></option>
                 </select>
             </div>
             </div>
@@ -224,6 +297,8 @@ and open the template in the editor.
         </form>
     </div>
     </div>
+        
+   
     <script>
     function openCity(evt, cityName) 
     {
