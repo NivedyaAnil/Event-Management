@@ -33,7 +33,7 @@ public class RegisterServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
-            double contact =Double.valueOf(request.getParameter("phone"));
+            double contact = Double.valueOf(request.getParameter("phone"));
             double nop = Double.valueOf(request.getParameter("person"));
             String name = request.getParameter("username");
             String event = request.getParameter("event");
@@ -41,7 +41,6 @@ public class RegisterServlet extends HttpServlet {
             String email = request.getParameter("email");
             String address = request.getParameter("add");
             String password = request.getParameter("password");
-
        
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -58,8 +57,8 @@ public class RegisterServlet extends HttpServlet {
             out.println("<br>Contact : " + contact);
             out.println("<br>Address : " + address);
             
-             try
-              {
+            try
+            {
 
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Event","root","");
@@ -72,8 +71,9 @@ public class RegisterServlet extends HttpServlet {
                 rs.close();
                 if(count!=0)
                 {
-                    out.println("<html><body><script>alert('Thank you!!');window.location.assign('index.html');</script></body></html>");
-                    request.getRequestDispatcher("index.html").forward(request, response);   
+                  //alert date already 
+                    request.getRequestDispatcher("index.html").forward(request, response);
+                  
                 }
                  
                 ps.setString(1,name);
