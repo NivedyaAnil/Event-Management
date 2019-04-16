@@ -2113,7 +2113,7 @@
                           + "location.replace('wedding.html');"
                           + "</script>");
         */
-       
+                
                 out.write("alert('TOTAL PRICE+" + total + "')");
                 String t=String.valueOf(total);
                 out.println(t);
