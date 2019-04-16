@@ -25,76 +25,15 @@ and open the template in the editor.
                 width:100%;
                 margin: 0;
                 font-family: Arial, Helvetica, sans-serif;
-            }
-            .container 
-            {
-              border-radius: 5px;
-              background-color: rgba(40,20,30,.50);
-              padding: 20px;
-              width: 50%;
-              height: 100%;
-              display: block;
-              margin-left: auto;
-              margin-right: auto;
-            }
-            .col-25 
-            {
-              float: left;
-              width: 25%;
-              margin-top: 6px;
-            }
-            .col-75 
-            {
-              float: left;
-              width: 75%;
-              margin-top: 6px;
-            }
-            .row:after 
-            {
-              content: "";
-              display: table;
-              clear: both;
-            }
-            @media screen and (max-width: 600px)
-            {
-              .col-25, .col-75, input[type=submit] 
-              {
-                width: 100%;
-                margin-top: 0;
-              }
-            }
+            } 
         </style>
     </head>
     <body>
     <center><br><br><br>
         <div class="container">    
         <form action="UpdateUser" method="POST">
-            <div class="row">
-            <div class="col-25">
-		<label class="label">YOUR NAME</label>
-                    <input name="username" type="text" class="input" required>
-                <label class="label">YOUR EVENT</label>
-                    <select name="event" type="text" class="input" required>
-                            <option>....SELECT....</option>
-                            <option value="wedding">WEDDING</option>
-                            <option value="birthday">BIRTHDAY</option>
-                            <option  value= "party">PARTY</option>
-                            <option value="gettogether">GET TOGETHER</option>
-                    </select>  
-                <label class="label">NO. OF PERSON</label>
-		    <input name="person" type="number" class="input" required>
-                <label class="label">DATE & TIME</label>
-                    <input name="dt" type="date" class="input" required>
-		<label class="label">EMAIL ID</label>
-                    <input name="email" type="email" class="input" required>
-		<label class="label">PHONE NUMBER</label>
-                    <input name="phone" type="text" class="input" required>
-		<label class="label">ADDRESS</label>
-                    <input name="add" type="text" class="input" required>
-	
-                    <input type="submit" class="button" value="SUBMIT">
-            </div></div>	   
-                        </form>		
+               
+        </form>		
         </div>            
         </center>
     </body>
