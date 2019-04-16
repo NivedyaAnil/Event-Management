@@ -70,10 +70,11 @@ public class RegisterServlet extends HttpServlet {
                 count = rs.getInt("rc");
                 rs.close();
                 if(count!=0)
-                {
-                  //alert date already 
+                { 
+                    //alert
                     request.getRequestDispatcher("index.html").forward(request, response);
-                  
+                    out.println("<html><body><script>alert('Thank you!!');window.location.assign('index.html');</script></body></html>");
+
                 }
                  
                 ps.setString(1,name);
