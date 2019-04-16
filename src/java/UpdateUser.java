@@ -35,10 +35,10 @@ public class UpdateUser extends HttpServlet {
             String name = request.getParameter("username"); 
             String event = request.getParameter("event"); 
             String person = request.getParameter("person"); 
-            int nop = Integer.parseInt(person);
+            double nop = Double.parseDouble(person);
             String dt = request.getParameter("dt");
             String phone = request.getParameter("phone"); 
-            int contact = Integer.parseInt(phone);
+            double contact = Double.parseDouble(phone);
             String address = request.getParameter("add"); 
             String mail = request.getParameter("email");
             
@@ -52,12 +52,12 @@ public class UpdateUser extends HttpServlet {
             {
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Event","root","");
-                PreparedStatement ps = con.prepareStatement("update event_register set NAME = ?,EVENT=?,NO_OF_PERSONS=?,DATE_TIME=?,CONTACT=?,ADDRESS=? where EMAIL = ?") ;
+                PreparedStatement ps = con.prepareStatement("update event_register set NAME = ?,EVENT=?,NO_OF_PERSON=?,DATE_TIME=?,CONTACT=?,ADDRESS=? where EMAIL = ?") ;
                 ps.setString(1, name);
                 ps.setString(2, event);
-                ps.setInt(3,nop);
+                ps.setDouble(3,nop);
                 ps.setString(4,dt);
-                ps.setInt(5,contact);
+                ps.setDouble(5,contact);
                 ps.setString(6,address);
                 ps.setString(7, mail);
                 ps.executeUpdate(); 
