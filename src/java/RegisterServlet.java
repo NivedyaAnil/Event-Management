@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -32,16 +33,15 @@ public class RegisterServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
+            double contact =Double.valueOf(request.getParameter("phone"));
+            double nop = Double.valueOf(request.getParameter("person"));
             String name = request.getParameter("username");
             String event = request.getParameter("event");
-            String person = request.getParameter("person");
             String dt = request.getParameter("dt");
             String email = request.getParameter("email");
-            String phone = request.getParameter("phone");
-            int contact = Integer.parseInt(phone);
             String address = request.getParameter("add");
             String password = request.getParameter("password");
-            int nop = Integer.parseInt(person);
+
        
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -52,35 +52,39 @@ public class RegisterServlet extends HttpServlet {
             
             out.println("Name : "  + name);
             out.println("Event : " + event);
-            out.println("<br>No. of persons : " + nop);
+            out.println("<br>No. of persons : "+ nop );
             out.println("<br>Date : " + dt);
             out.println("<br>Email : " + email);
-            out.println("<br>Contact : " + phone);
+            out.println("<br>Contact : " + contact);
             out.println("<br>Address : " + address);
             
              try
               {
+
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Event","root","");
                 PreparedStatement ps   =  con.prepareStatement("insert into event_register values(?,?,?,?,?,?,?,?)");
-                PreparedStatement ps1   =  con.prepareStatement("select COUNT(*) as rc  from event_register where DATE_TIME='2019-12-28'");
+                PreparedStatement ps1   =  con.prepareStatement("select COUNT(*) as rc  from event_register where DATE_TIME='"+dt+"'");
                 ResultSet rs = ps1.executeQuery();
                 rs.next();
-                int count = rs.getInt("rc");
+                int count=0;
+                count = rs.getInt("rc");
                 rs.close();
-               if(count!=0)
-               {
-                   out.println("DATE IS ALREADY BOOKED");
-               }
+                if(count!=0)
+                {
+                    out.println("<html><body><script>alert('Thank you!!');window.location.assign('index.html');</script></body></html>");
+                    request.getRequestDispatcher("index.html").forward(request, response);   
+                }
                  
                 ps.setString(1,name);
                 ps.setString(2,event);
-                ps.setInt(3,nop);
+                ps.setDouble(3,nop);
                 ps.setString(4,dt);
                 ps.setString(5,email);               
-                ps.setInt(6,contact);
+                ps.setDouble(6,contact);
                 ps.setString(7,address);
                 ps.setString(8, password);
+                if(count==0)
                 ps.executeUpdate();
                 con.close();
                 
@@ -159,7 +163,7 @@ public class RegisterServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private void alert(String booked) {
+    private void alert() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
