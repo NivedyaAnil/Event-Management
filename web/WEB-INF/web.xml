@@ -80,6 +80,10 @@
         <servlet-name>LogOut</servlet-name>
         <servlet-class>LogOut</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Display_Total</servlet-name>
+        <servlet-class>Display_Total</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>registration</servlet-name>
         <url-pattern>/registration</url-pattern>
@@ -159,6 +163,10 @@
     <servlet-mapping>
         <servlet-name>LogOut</servlet-name>
         <url-pattern>/LogOut</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Display_Total</servlet-name>
+        <url-pattern>/Display_Total</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

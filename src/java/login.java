@@ -41,11 +41,7 @@ public class login extends HttpServlet {
             out.println("<title>Servlet login</title>");            
             out.println("</head>");
             out.println("<body>");
-             
-         
-                getServletConfig().getServletContext()
-                .getRequestDispatcher("/feedback_store")
-                .forward(request, response);
+            
             try
             {
                 Class.forName("com.mysql.jdbc.Driver");
