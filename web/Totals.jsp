@@ -2116,7 +2116,7 @@
         
                 request.setAttribute("total", String.valueOf(total));
                 getServletConfig().getServletContext()
-                .getRequestDispatcher("/Display_total")
+                .getRequestDispatcher("/Total_display")
                 .forward(request, response);
                 
         /*      out.write("alert('TOTAL PRICE+" + total + "')");
