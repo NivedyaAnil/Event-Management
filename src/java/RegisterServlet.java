@@ -56,6 +56,7 @@ public class RegisterServlet extends HttpServlet {
             out.println("<br>Email : " + email);
             out.println("<br>Contact : " + contact);
             out.println("<br>Address : " + address);
+            
             out.println("<html><body><script>alert('Thank you!!');window.location.assign('index.html');</script></body></html>");
             
             try

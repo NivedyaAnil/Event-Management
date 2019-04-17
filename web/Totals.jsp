@@ -2113,17 +2113,18 @@
                           + "location.replace('wedding.html');"
                           + "</script>");
         */
-        request.setAttribute("total", String.valueOf(total));
+        
+        /*      request.setAttribute("total", String.valueOf(total));
                 getServletConfig().getServletContext()
-                  .getRequestDispatcher("/feedbcak_store")
-                  .forward(request, response);
-               /* out.write("alert('TOTAL PRICE+" + total + "')");
+                .getRequestDispatcher("/feedbcak_store")
+                .forward(request, response);
+        */        
+                out.write("alert('TOTAL PRICE+" + total + "')");
                 String t=String.valueOf(total);
                 out.println(t);
                 out.println("<script type='text/javascript'>"
-                          + "alert('total='+t);"
-                         
-                          + "</script>");*/
+                          + "alert('total='+t);" 
+                          + "</script>");
    
             }
 
