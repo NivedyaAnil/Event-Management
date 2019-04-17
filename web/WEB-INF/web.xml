@@ -84,6 +84,10 @@
         <servlet-name>Display_Total</servlet-name>
         <servlet-class>Display_Total</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Display_total</servlet-name>
+        <servlet-class>Display_total</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>registration</servlet-name>
         <url-pattern>/registration</url-pattern>
@@ -167,6 +171,10 @@
     <servlet-mapping>
         <servlet-name>Display_Total</servlet-name>
         <url-pattern>/Display_Total</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Display_total</servlet-name>
+        <url-pattern>/Display_total</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
