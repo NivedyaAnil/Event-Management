@@ -43,8 +43,9 @@ public class feedback_store extends HttpServlet {
             out.println("<body>");
             
             out.println("<img src=box1.jpeg alt=Image1>");
-           try
-           {
+            
+            try
+            {
                Class.forName("com.mysql.jdbc.Driver");
                Connection con =DriverManager.getConnection("jdbc:mysql://localhost:3306/Event","root","");
                PreparedStatement ps = con.prepareStatement("insert into feedback values(?,?)");
@@ -56,11 +57,11 @@ public class feedback_store extends HttpServlet {
                 out.println("<html><body><script>alert('Thank you!!!');window.location.assign('index.html');</script></body></html>");
 
                con.close();
-           }
-           catch(Exception e)
-           {
+            }
+            catch(Exception e)
+            {
                out.println("Exception : "+e);
-           }
+            }
             out.println("</body>");
             out.println("</html>");
         }
