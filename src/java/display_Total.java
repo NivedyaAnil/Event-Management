@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author KHSCI5MCA16069
  */
-public class feedback_store extends HttpServlet {
+public class display_Total extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -53,8 +53,8 @@ public class feedback_store extends HttpServlet {
                ps.setString(2, feedback);
                ps.executeUpdate();
                
-           
-                   out.println("<html><body><script>alert('Thank you!!');window.location.assign('index.html');</script></body></html>");
+                String total=(String) request.getAttribute("total");
+                   out.println("<html><body><script>alert('Total Amount is "+total+"');window.location.assign('index.html');</script></body></html>");
 
                con.close();
            }
