@@ -2113,14 +2113,17 @@
                           + "location.replace('wedding.html');"
                           + "</script>");
         */
-                
-                out.write("alert('TOTAL PRICE+" + total + "')");
+        request.setAttribute("total", String.valueOf(total));
+                getServletConfig().getServletContext()
+                  .getRequestDispatcher("/feedback_store")
+                  .forward(request, response);
+               /* out.write("alert('TOTAL PRICE+" + total + "')");
                 String t=String.valueOf(total);
                 out.println(t);
                 out.println("<script type='text/javascript'>"
                           + "alert('total='+t);"
                          
-                          + "</script>");
+                          + "</script>");*/
    
             }
 

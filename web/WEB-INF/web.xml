@@ -40,6 +40,46 @@
         <servlet-name>feedback_store</servlet-name>
         <servlet-class>feedback_store</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UserUpdate</servlet-name>
+        <servlet-class>UserUpdate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserService</servlet-name>
+        <servlet-class>UserService</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserServiceWed</servlet-name>
+        <servlet-class>UserServiceWed</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserServiceBirth</servlet-name>
+        <servlet-class>UserServiceBirth</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserServiceParty</servlet-name>
+        <servlet-class>UserServiceParty</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UserServiceGet</servlet-name>
+        <servlet-class>UserServiceGet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateUser</servlet-name>
+        <servlet-class>UpdateUser</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>status</servlet-name>
+        <servlet-class>status</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Status</servlet-name>
+        <servlet-class>Status</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogOut</servlet-name>
+        <servlet-class>LogOut</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>registration</servlet-name>
         <url-pattern>/registration</url-pattern>
@@ -79,6 +119,46 @@
     <servlet-mapping>
         <servlet-name>feedback_store</servlet-name>
         <url-pattern>/feedback_store</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserUpdate</servlet-name>
+        <url-pattern>/UserUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserService</servlet-name>
+        <url-pattern>/UserService</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserServiceWed</servlet-name>
+        <url-pattern>/UserServiceWed</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserServiceBirth</servlet-name>
+        <url-pattern>/UserServiceBirth</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserServiceParty</servlet-name>
+        <url-pattern>/UserServiceParty</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserServiceGet</servlet-name>
+        <url-pattern>/UserServiceGet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateUser</servlet-name>
+        <url-pattern>/UpdateUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>status</servlet-name>
+        <url-pattern>/status</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Status</servlet-name>
+        <url-pattern>/Status</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogOut</servlet-name>
+        <url-pattern>/LogOut</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

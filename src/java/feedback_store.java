@@ -38,9 +38,12 @@ public class feedback_store extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet feedback_store</title>");            
+            out.println("<title>Servlet feedback_store</title>");    
+       
             out.println("</head>");
             out.println("<body>");
+            
+                out.println("<img src=b5.jpg alt=Image1 >");
            try
            {
                Class.forName("com.mysql.jdbc.Driver");
@@ -50,7 +53,8 @@ public class feedback_store extends HttpServlet {
                ps.setString(2, feedback);
                ps.executeUpdate();
                
-                   out.println("<html><body><script>alert('Thank you!!');window.location.assign('index.html');</script></body></html>");
+                String total=(String) request.getAttribute("total");
+                   out.println("<html><body><script>alert('Thank you!!"+total+"');window.location.assign('index.html');</script></body></html>");
 
                con.close();
            }

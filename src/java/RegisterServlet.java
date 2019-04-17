@@ -40,7 +40,7 @@ public class RegisterServlet extends HttpServlet {
             String dt = request.getParameter("dt");
             String email = request.getParameter("email");
             String address = request.getParameter("add");
-            String password = request.getParameter("password");
+            String password = request.getParameter("password"); 
        
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -56,6 +56,7 @@ public class RegisterServlet extends HttpServlet {
             out.println("<br>Email : " + email);
             out.println("<br>Contact : " + contact);
             out.println("<br>Address : " + address);
+            out.println("<html><body><script>alert('Thank you!!');window.location.assign('index.html');</script></body></html>");
             
             try
             {
@@ -72,8 +73,13 @@ public class RegisterServlet extends HttpServlet {
                 if(count!=0)
                 { 
                     //alert
+                   //response.sendRedirect("feedback_store");
+                    
+                    getServletConfig().getServletContext()
+                  .getRequestDispatcher("/feedback_store")
+                  .forward(request, response);
                     request.getRequestDispatcher("index.html").forward(request, response);
-                    out.println("<html><body><script>alert('Thank you!!');window.location.assign('index.html');</script></body></html>");
+                    
 
                 }
                  
@@ -119,7 +125,7 @@ public class RegisterServlet extends HttpServlet {
             {
                 
             }
-            
+           
             out.println("</body>");
             out.println("</html>");
         }
