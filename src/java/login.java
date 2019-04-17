@@ -42,6 +42,8 @@ public class login extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             
+            out.println("<img src=box2.jpeg alt=Image1>");
+            
             try
             {
                 Class.forName("com.mysql.jdbc.Driver");
