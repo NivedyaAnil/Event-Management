@@ -136,7 +136,32 @@ and open the template in the editor.
                 width: 100%;
                 margin-top: 0;
               }
-            }  
+            }
+            .text 
+            {
+              text-align: center;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              color: white;
+            }
+            .text button 
+            {
+              border: none;
+              outline: 0;
+              display: inline-block;
+              padding: 10px 25px;
+              color: black;
+              background-color: #1161ee;
+              text-align: center;
+              cursor: pointer;
+            }
+            .text button:hover 
+            {
+              background-color: #007399;
+              color: white;
+            }            
         </style>
     </head>
     <body>
@@ -144,7 +169,7 @@ and open the template in the editor.
         <button onclick="openCity(event, 'UPDATE')">UPDATE</button>
         <button onclick="openCity(event, 'BOOKING STATUS')">BOOKING STATUS</button>
         <button onclick="openCity(event, 'FEEDBACK')">FEEDBACK</button>
-        <button onclick="openCity(event, 'LOGOUT')">LOG OUT</button> 
+        <button onclick="openCity(event, 'LOGOUT')">LOGOUT</button> 
     </div>
 
     <div id="UPDATE" class="tabcontent"><br><br><br><br><br><br><br><br><br>
@@ -295,6 +320,18 @@ and open the template in the editor.
             <div class="row">
                 <input type="submit" value="Submit">
             </div>
+        </form>
+    </div>
+    </div>
+     
+    <div id="LOGOUT" class="tabcontent"><br><br><br><br><br><br><br><br><br>
+    <div class="container">
+        <form method="POST" action="LogOut">
+            <div class="text">
+            <h1 style="font-size:50px">VISIT AGAIN</h1>
+            <p>NAAM EVENTS FOREVER</p>
+            <button>THANK YOU</button>
+            </div> 
         </form>
     </div>
     </div>
