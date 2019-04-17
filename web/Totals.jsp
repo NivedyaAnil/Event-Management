@@ -2115,7 +2115,7 @@
         */
         request.setAttribute("total", String.valueOf(total));
                 getServletConfig().getServletContext()
-                  .getRequestDispatcher("/display_Total")
+                  .getRequestDispatcher("/feedbcak_store")
                   .forward(request, response);
                /* out.write("alert('TOTAL PRICE+" + total + "')");
                 String t=String.valueOf(total);

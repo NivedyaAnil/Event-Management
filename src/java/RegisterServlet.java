@@ -74,11 +74,11 @@ public class RegisterServlet extends HttpServlet {
                 { 
                     //alert
                    //response.sendRedirect("feedback_store");
-                    
-                    getServletConfig().getServletContext()
+                    out.println("<html><body><script>alert('Thank you!!');window.location.assign('index.html');</script></body></html>");
+                  /*  getServletConfig().getServletContext()
                   .getRequestDispatcher("/feedback_store")
-                  .forward(request, response);
-                    request.getRequestDispatcher("index.html").forward(request, response);
+                  .forward(request, response);*/
+                    //request.getRequestDispatcher("index.html").forward(request, response);
                     
 
                 }

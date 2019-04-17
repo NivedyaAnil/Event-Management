@@ -32,8 +32,8 @@ public class display_Total extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
-            String event = request.getParameter("event");
-            String feedback = request.getParameter("feedback");
+          //  String event = request.getParameter("event");
+         //   String feedback = request.getParameter("feedback");
             
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -44,24 +44,24 @@ public class display_Total extends HttpServlet {
             out.println("<body>");
             
                 out.println("<img src=b5.jpg alt=Image1 >");
-           try
+          /* try
            {
                Class.forName("com.mysql.jdbc.Driver");
                Connection con =DriverManager.getConnection("jdbc:mysql://localhost:3306/Event","root","");
                PreparedStatement ps = con.prepareStatement("insert into feedback values(?,?)");
-               ps.setString(1,event);
-               ps.setString(2, feedback);
-               ps.executeUpdate();
+              // ps.setString(1,event);
+              // ps.setString(2, feedback);
+               ps.executeUpdate();*/
                
                 String total=(String) request.getAttribute("total");
                    out.println("<html><body><script>alert('Total Amount is "+total+"');window.location.assign('index.html');</script></body></html>");
-
+/*
                con.close();
            }
            catch(Exception e)
            {
                out.println("Exception : "+e);
-           }
+           }*/
             out.println("</body>");
             out.println("</html>");
         }
