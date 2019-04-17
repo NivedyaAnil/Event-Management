@@ -36,8 +36,8 @@ and open the template in the editor.
               overflow: hidden;
               border: 1px solid #ccc; 
               background-color: rgba(40,20,30,.5);
-              margin: 10px;
-              width:20%;
+              margin: 20px;
+              width:23%;
               margin-left: auto;
               margin-right: auto;
             }
@@ -136,16 +136,17 @@ and open the template in the editor.
                 width: 100%;
                 margin-top: 0;
               }
-            }
+            }  
         </style>
     </head>
     <body>
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'UPDATE')">UPDATE</button>
-        <button class="tablinks" onclick="openCity(event, 'BOOKING STATUS')">BOOKING STATUS</button>
-        <button class="tablinks" onclick="openCity(event, 'FEEDBACK')">FEEDBACK</button>
+        <button onclick="openCity(event, 'UPDATE')">UPDATE</button>
+        <button onclick="openCity(event, 'BOOKING STATUS')">BOOKING STATUS</button>
+        <button onclick="openCity(event, 'FEEDBACK')">FEEDBACK</button>
+        <button onclick="openCity(event, 'LOGOUT')">LOG OUT</button> 
     </div>
-    
+
     <div id="UPDATE" class="tabcontent"><br><br><br><br><br><br><br><br><br>
     <div class="container">
         <form method="POST" action="UpdateUser">
@@ -220,7 +221,7 @@ and open the template in the editor.
         
     <div id="BOOKING STATUS" class="tabcontent"><br><br><br><br><br><br><br><br><br>
     <div class="container">
-        <form method="POST">
+        <form method="POST" action="Status">
             <div class="row">
             <div class="col-25">
                 <label for="uname"><h1>USER NAME</h1></label>
@@ -298,7 +299,6 @@ and open the template in the editor.
     </div>
     </div>
         
-   
     <script>
     function openCity(evt, cityName) 
     {
