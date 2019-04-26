@@ -68,8 +68,10 @@ public class UpdateUser extends HttpServlet {
             {
                 out.println("Exception : "+e);
             }
-
-            out.println("<h1>Servlet UpdateUser at " + request.getContextPath() + "</h1>");
+            
+            out.println("<img src=box1.jpeg alt=Image1>");
+            out.println("<html><body><script>alert('DETAILS ARE UPDATED!!!');window.location.assign('log.html');</script></body></html>");
+            
             out.println("</body>");
             out.println("</html>");
         }
