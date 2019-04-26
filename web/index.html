@@ -38,7 +38,7 @@ and open the template in the editor.
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
-                background-image: url("bg.jpg");
+                background-image: url("my.jpg");
             }
             h1 
             {
@@ -61,7 +61,7 @@ and open the template in the editor.
             #navbar 
             {
                 overflow: hidden;
-                background-color: burlywood;
+                background-color: peru;
             }
             #navbar a 
             {
@@ -75,7 +75,7 @@ and open the template in the editor.
             }
             #navbar a:hover 
             {
-                background-color: bisque;
+                background-color: rgba(0,0,0,0.5);
                 color: darkgoldenrod;
             }
             #navbar a.active 
@@ -214,14 +214,14 @@ and open the template in the editor.
             }
             .buttonload 
             {
-                background-color: burlywood;
-                color: black;
+                background-color: peru;
+                color: white;
                 padding: 14px 20px;
                 margin: 8px 0;
                 border: none;
                 cursor: pointer;
                 width: 20%; 
-                font-size: 16px; 
+                font-size: 20px;
             }
             .fa 
             {
@@ -246,7 +246,7 @@ and open the template in the editor.
             .buttons 
             {
               position: relative;
-              background-color: burlywood;
+              background-color: peru;
               border: none;
               font-size: 28px;
               color: black;
@@ -402,12 +402,12 @@ and open the template in the editor.
     </head>
     <body data-spy="scroll" data-target=".navbar">
         <div class="bg">
-            <center><img src="icon.PNG" style="width:15%;height:30%;top:25%;border-radius: 50%;"></center>
-            <p align="left"><button class="buttons" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">ADMIN</button></p>
+            <img src="icon.PNG" style="width:15%;height:30%;top:25%;border-radius: 50%;">
             <center>
                 <form action="registration.html" method="POST">
                     <button type="submit" style="width:content-box;" name="registration" class="buttonload"><i class="fa fa-refresh fa-spin"></i><b>CONNECT</b></button>
-                </form>
+                </form><br><br><br><br>
+                <button class="buttons" onclick="document.getElementById('id01').style.display='block'" style="width:content-box;" class="buttonload"><i class="fa fa-spinner fa-spin"></i><b>ADMIN</b></button>
             </center>   
         </div>
         
