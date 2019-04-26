@@ -31,6 +31,18 @@ public class Total_display extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            
+           String stage1 = request.getParameter("stage1");
+           String dec1 = request.getParameter("dec1");
+           String light1 = request.getParameter("light1");
+           String camera1 = request.getParameter("camera1");
+           String cater1 = request.getParameter("cater1");
+           String cake1 = request.getParameter("cake1");
+           String makeup1 = request.getParameter("makeup1");
+           String car1 = request.getParameter("car1");
+           String honey1 = request.getParameter("honey1");
+           String submit=request.getParameter("sub");
+           
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -40,8 +52,9 @@ public class Total_display extends HttpServlet {
             
             out.println("<img src=box1.jpeg alt=Image1>");
             
-                String total=(String) request.getAttribute("total");
-                out.println("<html><body><script>alert('Total Amount is "+total+"');window.location.assign('index.html');</script></body></html>");
+            String total=(String) request.getAttribute("total");
+            out.println("<html><body><script>alert('Total Amount is "+total+"');window.location.assign('index.html');</script></body></html>"); 
+            
             out.println("</body>");
             out.println("</html>");
         }
