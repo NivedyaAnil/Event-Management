@@ -49,7 +49,7 @@ public class UserServlet extends HttpServlet
                 
                 out.println("<html><head></head><body background='box2.jpeg'><center><img src=\"icon.PNG\" height=\"150px\" width=\"250px\"></center><p><font size='32px' face='monotype corsiva'><center> YOUR DETAILS HAVE BEEN ADDED....</center></font></p></body></html>\n ");
 
-                out.println("<table border=5 width=100% height=100% align=center>"
+                out.println("<table border=5px solid black border-collapse=collapse width=100% height=100% align=center>"
                         + "<tr>"
                         + "<th>NAME </th>"
                         + "<th>EVENT</th>"
