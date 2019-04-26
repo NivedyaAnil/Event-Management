@@ -88,6 +88,14 @@
         <servlet-name>Display_total</servlet-name>
         <servlet-class>Display_total</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Total_display</servlet-name>
+        <servlet-class>Total_display</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Booked</servlet-name>
+        <servlet-class>Booked</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>registration</servlet-name>
         <url-pattern>/registration</url-pattern>
@@ -175,6 +183,14 @@
     <servlet-mapping>
         <servlet-name>Display_total</servlet-name>
         <url-pattern>/Display_total</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Total_display</servlet-name>
+        <url-pattern>/Total_display</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Booked</servlet-name>
+        <url-pattern>/Booked</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
