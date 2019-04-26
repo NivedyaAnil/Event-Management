@@ -53,8 +53,8 @@ public class feedback_store extends HttpServlet {
                ps.setString(2, feedback);
                ps.executeUpdate();
                
-           
-                out.println("<html><body><script>alert('Thank you!!!');window.location.assign('index.html');</script></body></html>");
+
+            out.println("<html><body><script>alert('THANK YOU FOR THE FEEDBACK!!!');window.location.assign('log.html');</script></body></html>");
 
                con.close();
             }
@@ -62,6 +62,9 @@ public class feedback_store extends HttpServlet {
             {
                out.println("Exception : "+e);
             }
+            
+            
+            
             out.println("</body>");
             out.println("</html>");
         }
