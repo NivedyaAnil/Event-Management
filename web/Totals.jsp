@@ -233,13 +233,13 @@
                           + "location.replace('wedding.html');"
                           + "</script>");
                 }
-                else
+                /*else
                 {
                     out.println("<script type='text/javascript'>"
                           + "alert('PLEASE SELECT!');"
                           + "location.replace('wedding.html');"
                           + "</script>");
-                } 
+                } */
             }
             
             if(camera1!=null)
