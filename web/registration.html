@@ -169,7 +169,31 @@ and open the template in the editor.
             {
                 text-align:center;
             }
+           
     </style>
+    <script>
+             function isCapital(evt)
+            {
+                var charCode = (evt.which) ? evt.which : event.keyCode
+                if (!(charCode > 64 && charCode < 91 ))
+                {
+                    alert("Capital Letters Only!!!");
+                    return false;
+                }
+                     return true;
+            }
+            
+            function isNumberKey1(evt)
+            {
+                var charCode = (evt.which) ? evt.which : event.keyCode
+                if (charCode > 31 && (charCode < 48 || charCode > 57))
+                {
+                    alert("Numbers Only!!!");
+                    return false;
+                }
+                     return true;
+            }
+    </script>
     </head>
     <body background="food7.jpg">
         
@@ -201,7 +225,7 @@ and open the template in the editor.
                         <form action="RegisterServlet" method="POST">
                             <div class="group">
 				<label class="label">YOUR NAME</label>
-                                    <input name="username" type="text" class="input" required>
+                                    <input name="username" type="text" onkeypress="return isCapital(event)" class="input" required>
 			    </div>
                            <div class="group">
 				<label class="label">YOUR EVENT</label>
@@ -215,7 +239,7 @@ and open the template in the editor.
 			    </div>
                             <div class="group">
 				<label class="label">NO. OF PERSON</label>
-				    <input name="person" type="text" class="input" required>
+				    <input name="person" type="text" onkeypress="return isNumberKey1(event)" class="input" required>
 			    </div>
                             <div class="group">
                                 <label class="label">DATE & TIME</label>
@@ -231,7 +255,7 @@ and open the template in the editor.
 			    </div>
 		            <div class="group">
 				<label class="label">PHONE NUMBER</label>
-                                    <input name="phone" type="text" class="input" required>
+                                    <input name="phone" type="text" onkeypress="return isNumberKey1(event)" class="input" required>
 			    </div>
                             <div class="group">
 				<label class="label">ADDRESS</label>
