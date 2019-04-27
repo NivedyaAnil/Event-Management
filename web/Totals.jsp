@@ -2105,27 +2105,12 @@
                 out.println(honeymoon);
                 
                 total=stage+decoration+lightsound+cameravideo+catering+cake+makeup+honeymoon;
-
-        //      alert("${variable}");
-              
-        /*      out.println("<script type='text/javascript'>"
-                          + "window.alert(${total});"
-                          + "location.replace('wedding.html');"
-                          + "</script>");
-        */
         
                 request.setAttribute("total", String.valueOf(total));
                 getServletConfig().getServletContext()
                 .getRequestDispatcher("/Total_display")
                 .forward(request, response);
-                
-        /*      out.write("alert('TOTAL PRICE+" + total + "')");
-                String t=String.valueOf(total);
-                out.println(t);
-                out.println("<script type='text/javascript'>"
-                          + "alert('total='+t);" 
-                          + "</script>");
-        */
+
             }
 
         %>  
