@@ -35,6 +35,7 @@ public class UserServiceWed extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+                    
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -45,6 +46,9 @@ public class UserServiceWed extends HttpServlet {
             {
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Event","root","");
+                PreparedStatement ps1 = con.prepareStatement("insert into wedding values(?,?)");
+    
+                ps1.executeUpdate();
                 PreparedStatement ps = con.prepareStatement("select * from wedding");
                 ResultSet rs = ps.executeQuery();
                 

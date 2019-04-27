@@ -73,14 +73,11 @@ public class RegisterServlet extends HttpServlet {
                 rs.close();
                 if(count!=0)
                 { 
-                  //alert
-                  //response.sendRedirect("feedback_store");
-                  //out.println("<html><body><script>alert('Thank you!!');window.location.assign('index.html');</script></body></html>");
+                  
                    getServletConfig().getServletContext()
                   .getRequestDispatcher("/Booked")
                   .forward(request, response);
-                  //request.getRequestDispatcher("index.html").forward(request, response);
-                    
+                  
 
                 }
                  
