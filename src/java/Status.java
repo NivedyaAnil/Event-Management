@@ -35,12 +35,39 @@ public class Status extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            
+            String user = request.getParameter("user");
+            String mail = request.getParameter("mail");
+            String event = request.getParameter("event");
+            
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet Status</title>");            
             out.println("</head>");
             out.println("<body>");
+            
+            out.println("<img src=box1.jpeg alt=Image1>");
+            
+            try
+            {
+               Class.forName("com.mysql.jdbc.Driver");
+               Connection con =DriverManager.getConnection("jdbc:mysql://localhost:3306/Event","root","");
+               PreparedStatement ps = con.prepareStatement("insert into status values(?,?,?)");
+               ps.setString(1,user);
+               ps.setString(2, mail);
+               ps.setString(3,event);
+               ps.executeUpdate();
+               
+
+            out.println("<html><body><script>alert('STATUS DONE!!!');window.location.assign('log.html');</script></body></html>");
+
+               con.close();
+            }
+            catch(Exception e)
+            {
+               out.println("Exception : "+e);
+            }
             
             out.println("</body>");
             out.println("</html>");
