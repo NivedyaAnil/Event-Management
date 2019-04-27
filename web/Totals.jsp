@@ -233,13 +233,13 @@
                           + "location.replace('wedding.html');"
                           + "</script>");
                 }
-                /*else
+                else
                 {
                     out.println("<script type='text/javascript'>"
                           + "alert('PLEASE SELECT!');"
                           + "location.replace('wedding.html');"
                           + "</script>");
-                } */
+                } 
             }
             
             if(camera1!=null)
@@ -1301,11 +1301,11 @@
                           + "location.replace('party.html');"
                           + "</script>");
                 }    
-                else if(dec3.equals("1000"))
+                else if(dec3.equals("1500"))
                 {
                      decoration=1000;
                      out.println("<script type='text/javascript'>"
-                          + "alert('YOUR DECORATION PRICE IS 1000');"
+                          + "alert('YOUR DECORATION PRICE IS 1500');"
                           + "location.replace('party.html');"
                           + "</script>");
                 }
@@ -1478,11 +1478,11 @@
                           + "location.replace('party.html');"
                           + "</script>");
                 }    
-                else if(camera3.equals("3000"))
+                else if(camera3.equals("2000"))
                 {
                      cameravideo=3000;
                      out.println("<script type='text/javascript'>"
-                          + "alert('YOUR CAMERA VIDEO PRICE IS 3000');"
+                          + "alert('YOUR CAMERA VIDEO PRICE IS 2000');"
                           + "location.replace('party.html');"
                           + "</script>");
                 }
