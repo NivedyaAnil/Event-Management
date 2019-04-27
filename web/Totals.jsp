@@ -2157,15 +2157,20 @@
                 out.println(cake);
                 out.println(makeup);
                 out.println(honeymoon);
+                
                 out.println(" sn= "+sn+" dn= "+dn+" lsn= "+lsn+" cvn=  "+cvn+" catn= "+catn+" cn= "+cn+" mn= "+mn+" carn= "+carn+" hn= "+hn);
+                
                 total=stage+decoration+lightsound+cameravideo+catering+cake+makeup+honeymoon;
                 
                 session.setAttribute("total", String.valueOf(total));
+                
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Event","root","");
                 PreparedStatement ps1=con.prepareStatement("insert into wedding values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-                String name= session.getAttribute("name").toString();
-                ps1.setString(1,name);
+                
+                //String name= session.getAttribute("name").toString();
+                //ps1.setString(1,name);
+                
                 ps1.setString(1,sn);
                 ps1.setString(2,stage+"");
                 ps1.setString(3,dn);
@@ -2186,6 +2191,7 @@
                 ps1.setString(18,honeymoon+"");
                 
                 ps1.executeUpdate();
+                
                 
                 request.getRequestDispatcher("/Total_display").forward(request, response);
             }
