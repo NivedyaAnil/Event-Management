@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author KHSCI5MCA16069
  */
-public class login extends HttpServlet {
+public class Detail extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,52 +30,71 @@ public class login extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            
-            String user = request.getParameter("user");
-            String email = request.getParameter("mail");
-            String pass = request.getParameter("pass");
-            
+            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet login</title>");   
-         
+            out.println("<title>Servlet Detail</title>");    
+               out.println("<style> .bg-text {\n" +
+"  background-color: rgb(0,0,0); /* Fallback color */\n" +
+"  background-color: rgba(0,0,0, 0.2); /* Black w/opacity/see-through */\n" +
+"  color: black;\n" +
+"  font-weight: bold;\n" +
+"  border: 0 solid #f1f1f1;\n" +
+"  position: absolute;\n" +
+"  top: 30%;\n" +
+"  left: 50%;\n" +
+"  transform: translate(-50%, -38%);\n" +
+"  z-index: 2;\n" +
+"  width: 55%;\n" +
+"  \n" +
+"  text-align:left;\n" +
+"}\n" +
+"</style>");
             out.println("</head>");
             out.println("<body>");
             
             out.println("<img src=box1.jpeg alt=Image1>");
-           
+             out.println("<div class='bg-text'>");
             try
             {
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Event","root","");
-                PreparedStatement ps = con.prepareStatement("select * from event_register ");
-  
-                out.println("user" +user);
-                out.println("email" +user);
-                out.println("password" +email);
-                
+                PreparedStatement ps = con.prepareStatement("select * from event_register");
                 ResultSet rs = ps.executeQuery();
+                    out.println("<table border=5 width=100% height=100% align=center>"
+                        + "<tr>"
+                        + "<th>NAME </th>"
+                        + "<th>EVENT</th>"
+                        +"<th>NO. OF PERSON</th>"
+                        +"<th>DATE & TIME</th>"
+                        +"<th>EMAIL ID</th>"
+                        +"<th>CONTACT</th>"
+                        +"<th>ADDRESS</th>"
+                        + "</tr>");
                 while(rs.next())
                 {
-                    if(email.equals(rs.getString(5))&& pass.equals(rs.getString(8)))
-                    {   
-                        MyGlobals.mail= email;
-                        out.println("email" +MyGlobals.mail);
-                        request.getRequestDispatcher("log.html").forward(request, response);
-                    }
-                    else
-                    {
-                        out.println("<html><body><script>alert('Something Wrong Has Occurred!!');window.location.assign('registration.html');</script></body></html>");
-                    }
-               } 
-                    con.close();
+                      String name = rs.getString(1);
+                    String event = rs.getString(2);
+                    int person = rs.getInt(3);
+                    String dt = rs.getString(4);
+                    String mail = rs.getString(5); 
+                    String contact = rs.getString(6);
+                    String address = rs.getString(7);
+                    
+                    out.println("<tr align=center >"+ "<td >" +name+"<td width ='20%' >"+event+"<td > "+person+"<td > "+ dt +" <td > "+mail+" <td> "+contact+"<td >  "+address+"</tr>");
+                    out.println("<br>");
+                    out.println("<br>"); 
+                }
+                out.println("</table>");
+                con.close();
             }
             catch(Exception e)
             {
-                out.println("Exception : "+e);
+                out.println("Exeption : e "+e);
             }
-            
+                
+            out.println("</div>");
             out.println("</body>");
             out.println("</html>");
         }

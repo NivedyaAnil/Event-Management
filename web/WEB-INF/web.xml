@@ -100,6 +100,10 @@
         <servlet-name>Remove</servlet-name>
         <servlet-class>Remove</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Detail</servlet-name>
+        <servlet-class>Detail</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>registration</servlet-name>
         <url-pattern>/registration</url-pattern>
@@ -199,6 +203,10 @@
     <servlet-mapping>
         <servlet-name>Remove</servlet-name>
         <url-pattern>/Remove</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Detail</servlet-name>
+        <url-pattern>/Detail</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

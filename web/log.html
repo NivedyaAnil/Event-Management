@@ -166,12 +166,20 @@ and open the template in the editor.
     </head>
     <body>
     <div class="tab">
+        <button onclick="openCity(event, 'DETAILS')">DETAILS</button>
         <button onclick="openCity(event, 'UPDATE')">UPDATE</button>
         <button onclick="openCity(event, 'BOOKING STATUS')">BOOKING STATUS</button>
         <button onclick="openCity(event, 'FEEDBACK')">FEEDBACK</button>
         <button onclick="openCity(event, 'LOGOUT')">LOGOUT</button> 
     </div>
-
+    
+    <div id="DETAILS" class="tabcontent"><br><br><br><br><br><br><br><br><br>
+    <div class="container">
+        <form method="POST" action="Detail">
+            
+        </form>
+    </div>
+    </div>    
     <div id="UPDATE" class="tabcontent"><br><br><br><br><br><br><br><br><br>
     <div class="container">
         <form method="POST" action="UpdateUser">

@@ -130,12 +130,8 @@ and open the template in the editor.
     </head>
     <body>
             <div class="main">
-            <h1><center><b>BIRTHDAY</b></center></h1>
-            <form action="Totals.jsp">
-                <center><input type="submit" name="sub" class="buttonsub" value="SUBMIT"></center>
-            </form>
+            <h1><center><b>BIRTHDAY</b></center></h1>     
             <hr>
-            
             <div id="myBtnContainer">
                 <button class="btn active">ALL SERVICES</button>
                 <button class="btn" onclick="filterSelection('stage')">STAGE</button>
@@ -145,12 +141,13 @@ and open the template in the editor.
                 <button class="btn" onclick="filterSelection('catering')">CATERING</button>
                 <button class="btn" onclick="filterSelection('cake')">CAKES</button>
             </div>       
-            
+             <form action="Totals.jsp" method="POST">
+                <center><input type="submit" name="sub" class="buttonsub" value="SUBMIT"></center>
             <div class="row">
             <div class="column stage">
                 <div class="content">
                 <img src="bday2.jpg" style="width:300px; height:200px">
-                <form action="Totals.jsp" method="POST">
+               
                     <h4>STAGE</h4>
                     <p><i class='fas fa-rupee-sign'></i> 5000/-</p>
                     <p>SELECTED: <input type="radio" name="stage2" id="myCheck1" onchange="showPrice()" value="5000" onclick="myFunction()"></p>
@@ -541,11 +538,11 @@ and open the template in the editor.
                     <p><input type="submit" class="button" value="DONE"></p>
                 </div>
           </div>
-          </form>
-                
+    
 <!--cake-->
                 
         </div> 
+                </form>
         </div> 
         
         <script>
