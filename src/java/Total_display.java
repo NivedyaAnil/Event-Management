@@ -56,6 +56,7 @@ public class Total_display extends HttpServlet {
             HttpSession session = request.getSession(false);
             
             String total=session.getAttribute("total").toString();
+            
             out.println("<html><body><script>alert('Total Amount is "+total+"');window.location.assign('index.html');</script></body></html>");
             
             //String total=(String) request.getAttribute("total");

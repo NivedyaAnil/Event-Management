@@ -36,6 +36,7 @@ public class Remove extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             
             String email = request.getParameter("email");
+            String name="";
             
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -43,20 +44,26 @@ public class Remove extends HttpServlet {
             out.println("<title>Servlet Remove</title>");            
             out.println("</head>");
             out.println("<body>");
+            out.println("<img src=box2.jpeg alt=Image1>");
+            
             try
             {
-                Class.forName("com.mysql.jdbc.Driver");
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Event","root","");
-                PreparedStatement ps = con.prepareStatement("delete  from event_register where EMAIL=?");
-                ps.setString(1, email);
-                out.println("deleted");
-                ps.executeUpdate();
+               Class.forName("com.mysql.jdbc.Driver");
+               Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Event","root","");
+               if(name!=null)
+               {
+                    PreparedStatement ps = con.prepareStatement("delete  from event_register where EMAIL=?");
+                    ps.setString(1, email);
+                    out.println("<html><body><script>alert('DELETED SUCCESSFULLY!!!');window.location.assign('admin.html');</script></body></html>");
+                    ps.executeUpdate();
+               }
                 con.close();
-            } 
+            }
             catch(Exception e)
             {
                 out.println("Exception : "+e);
             }
+
 
             out.println("</body>");
             out.println("</html>");
