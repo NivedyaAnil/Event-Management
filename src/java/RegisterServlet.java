@@ -49,6 +49,8 @@ public class RegisterServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             
+            out.println("<img src=box1.jpeg alt=Image1>");
+            
             out.println("Name : "  + name);
             out.println("Event : " + event);
             out.println("<br>No. of persons : "+ nop );
@@ -57,7 +59,7 @@ public class RegisterServlet extends HttpServlet {
             out.println("<br>Contact : " + contact);
             out.println("<br>Address : " + address);
             
-            out.println("<html><body><script>alert('Thank you!!');window.location.assign('index.html');</script></body></html>");
+            
             
             try
             {
@@ -121,7 +123,7 @@ public class RegisterServlet extends HttpServlet {
             
             else
             {
-                
+                out.println("<html><body><script>alert('SELECT AN EVENT!!');window.location.assign('registration.html');</script></body></html>");
             }
            
             out.println("</body>");

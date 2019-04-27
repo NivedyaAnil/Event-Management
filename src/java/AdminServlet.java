@@ -48,7 +48,7 @@ public class AdminServlet extends HttpServlet {
                 }
                 else
                 {     
-                    out.println("<img src=box1.jpeg alt=Image1>");
+                    out.println("<img src=box2.jpeg alt=Image1>");
                     out.println("<html><body><script>alert('Kindly use a valid Password!!!');window.location.assign('index.html');</script></body></html>");
                 }
                     

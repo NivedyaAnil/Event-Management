@@ -42,7 +42,7 @@ public class login extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             
-            out.println("<img src=box2.jpeg alt=Image1>");
+            out.println("<img src=box1.jpeg alt=Image1>");
             
             try
             {
@@ -65,7 +65,7 @@ public class login extends HttpServlet {
                     }
                     else
                     {
-                        out.println("Something Wrong Has Occurred");
+                        out.println("<html><body><script>alert('Something Wrong Has Occurred!!');window.location.assign('registration.html');</script></body></html>");
                     }
                } 
                     con.close();
