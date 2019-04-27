@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 /**
@@ -93,6 +94,9 @@ public class RegisterServlet extends HttpServlet {
                 ps.setString(8, password);
                 if(count==0)
                 ps.executeUpdate();
+                
+                HttpSession session = request.getSession(false);
+                session.setAttribute("name", name);
                 con.close();
                 
             }

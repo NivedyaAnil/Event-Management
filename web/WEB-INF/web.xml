@@ -96,6 +96,10 @@
         <servlet-name>Booked</servlet-name>
         <servlet-class>Booked</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Remove</servlet-name>
+        <servlet-class>Remove</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>registration</servlet-name>
         <url-pattern>/registration</url-pattern>
@@ -191,6 +195,10 @@
     <servlet-mapping>
         <servlet-name>Booked</servlet-name>
         <url-pattern>/Booked</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Remove</servlet-name>
+        <url-pattern>/Remove</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -4,6 +4,7 @@
     Author     : KHSCI5MCA16069
 --%>
 
+<%@page import="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,6 +16,7 @@
         
         <%!   
            int stage=0;
+           int st;
            int decoration=0;
            int lightsound=0;
            int cameravideo=0;
@@ -26,6 +28,7 @@
            int dj=0;
            int lanterns=0;
            int total=0;
+            String   sn="",dn="",lsn="",cvn="",catn="",cn="",mn="",carn="",hn="";
         %>  
        
          
@@ -46,6 +49,8 @@
                 if(stage1.equals("25000"))
                 {
                      stage=25000;
+                     sn="THEME BASED";
+                     session.setAttribute("sn","THEME BASED");
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR STAGE PRICE IS 25000');"
                           + "location.replace('wedding.html');"
@@ -54,6 +59,7 @@
                 else if(stage1.equals("50000"))
                 {
                      stage=50000;
+                     sn="TRADITIONAL";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR STAGE PRICE IS 50000');"
                           + "location.replace('wedding.html');"
@@ -62,6 +68,7 @@
                 else if(stage1.equals("60000"))
                 {
                      stage=60000;
+                     sn="TRADITIONAL";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR STAGE PRICE IS 60000');"
                           + "location.replace('wedding.html');"
@@ -70,6 +77,7 @@
                 else if(stage1.equals("55000"))
                 {
                      stage=55000;
+                     sn="THEME BASED";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR STAGE PRICE IS 55000');"
                           + "location.replace('wedding.html');"
@@ -78,6 +86,7 @@
                 else if(stage1.equals("45000"))
                 {
                      stage=45000;
+                     sn="THEME BASED";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR STAGE PRICE IS 45000');"
                           + "location.replace('wedding.html');"
@@ -86,6 +95,7 @@
                 else if(stage1.equals("30000"))
                 {
                      stage=30000;
+                     sn="THEME BASED";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR STAGE PRICE IS 30000');"
                           + "location.replace('wedding.html');"
@@ -94,6 +104,7 @@
                 else if(stage1.equals("20000"))
                 {
                      stage=20000;
+                     sn="THEME BASED";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR STAGE PRICE IS 20000');"
                           + "location.replace('wedding.html');"
@@ -102,6 +113,7 @@
                 else if(stage1.equals("35000"))
                 {
                      stage=35000;
+                     sn="THEME BASED";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR STAGE PRICE IS 35000');"
                           + "location.replace('wedding.html');"
@@ -110,6 +122,7 @@
                 else if(stage1.equals("55000"))
                 {
                      stage=55000;
+                     sn="THEME BASED";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR STAGE PRICE IS 55000');"
                           + "location.replace('wedding.html');"
@@ -121,7 +134,9 @@
                           + "alert('PLEASE SELECT!');"
                           + "location.replace('wedding.html');"
                           + "</script>");
-                } 
+                }
+                //MyGlobals.stage1=stage;
+                //out.println(stage1);
             }
             
             if(dec1!=null)
@@ -129,6 +144,7 @@
                 if(dec1.equals("1000"))
                 {
                      decoration=1000;
+                     dn="FLOWER";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR DECORATION PRICE IS 1000');"
                           + "location.replace('wedding.html');"
@@ -137,6 +153,7 @@
                 else if(dec1.equals("5000"))
                 {
                      decoration=50000;
+                     dn="FLOWER";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR DECORATION PRICE IS 50000');"
                           + "location.replace('wedding.html');"
@@ -145,6 +162,7 @@
                 else if(dec1.equals("3000"))
                 {
                      decoration=3000;
+                     dn="FLOWER";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR DECORATION PRICE IS 3000');"
                           + "location.replace('wedding.html');"
@@ -153,6 +171,7 @@
                 else if(dec1.equals("9000"))
                 {
                      decoration=9000;
+                     dn="FLOWER";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR DECORATION PRICE IS 9000');"
                           + "location.replace('wedding.html');"
@@ -161,6 +180,7 @@
                 else if(dec1.equals("5000"))
                 {
                      decoration=5000;
+                     dn="FLOWER";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR DECORATION PRICE IS 5000');"
                           + "location.replace('wedding.html');"
@@ -169,6 +189,7 @@
                 else if(dec1.equals("10000"))
                 {
                      decoration=10000;
+                     dn="FLOWER";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR DECORATION PRICE IS 10000');"
                           + "location.replace('wedding.html');"
@@ -188,6 +209,7 @@
                 if(light1.equals("1200"))
                 {
                      lightsound=1200;
+                     lsn="COLOR LIGHTS & SOUNDS";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR LIGHT SOUND PRICE IS 1200');"
                           + "location.replace('wedding.html');"
@@ -196,6 +218,7 @@
                 else if(light1.equals("16000"))
                 {
                      lightsound=16000;
+                     lsn="COLOR LIGHTS & SOUNDS";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR LIGHT SOUND PRICE IS 16000');"
                           + "location.replace('wedding.html');"
@@ -204,6 +227,7 @@
                 else if(light1.equals("1000"))
                 {
                      lightsound=1000;
+                     lsn="COLOR LIGHTS & SOUNDS";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR LIGHT SOUND PRICE IS 1000');"
                           + "location.replace('wedding.html');"
@@ -212,6 +236,7 @@
                 else if(light1.equals("2000"))
                 {
                      lightsound=2000;
+                     lsn="COLOR LIGHTS & SOUNDS";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR LIGHT SOUND PRICE IS 2000');"
                           + "location.replace('wedding.html');"
@@ -220,6 +245,7 @@
                 else if(light1.equals("1450"))
                 {
                      lightsound=1450;
+                     lsn="COLOR LIGHTS & SOUNDS";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR LIGHT SOUND PRICE IS 1450');"
                           + "location.replace('wedding.html');"
@@ -228,6 +254,7 @@
                 else if(light1.equals("1250"))
                 {
                      lightsound=1250;
+                     lsn="COLOR LIGHTS & SOUNDS";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR LIGHT SOUND PRICE IS 1250');"
                           + "location.replace('wedding.html');"
@@ -247,6 +274,7 @@
                 if(camera1.equals("10000"))
                 {
                      cameravideo=10000;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 10000');"
                           + "location.replace('wedding.html');"
@@ -255,6 +283,7 @@
                 else if(camera1.equals("80000"))
                 {
                      cameravideo=80000;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 80000');"
                           + "location.replace('wedding.html');"
@@ -263,6 +292,7 @@
                 else if(camera1.equals("7000"))
                 {
                      cameravideo=7000;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 7000');"
                           + "location.replace('wedding.html');"
@@ -271,6 +301,7 @@
                 else if(camera1.equals("5000"))
                 {
                      cameravideo=5000;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 5000');"
                           + "location.replace('wedding.html');"
@@ -279,6 +310,7 @@
                 else if(camera1.equals("3500"))
                 {
                      cameravideo=3500;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 3500');"
                           + "location.replace('wedding.html');"
@@ -287,6 +319,7 @@
                 else if(camera1.equals("7000"))
                 {
                      cameravideo=7000;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 7000');"
                           + "location.replace('wedding.html');"
@@ -295,6 +328,7 @@
                 else if(camera1.equals("8000"))
                 {
                      cameravideo=8000;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 8000');"
                           + "location.replace('wedding.html');"
@@ -303,6 +337,7 @@
                 else if(camera1.equals("2900"))
                 {
                      cameravideo=2900;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 2900');"
                           + "location.replace('wedding.html');"
@@ -311,6 +346,7 @@
                 else if(camera1.equals("3000"))
                 {
                      cameravideo=3000;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 3000');"
                           + "location.replace('wedding.html');"
@@ -319,6 +355,7 @@
                 else if(camera1.equals("20000"))
                 {
                      cameravideo=20000;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 20000');"
                           + "location.replace('wedding.html');"
@@ -327,6 +364,7 @@
                 else if(camera1.equals("9000"))
                 {
                      cameravideo=9000;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 9000');"
                           + "location.replace('wedding.html');"
@@ -335,6 +373,7 @@
                 else if(camera1.equals("33000"))
                 {
                      cameravideo=33000;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 33000');"
                           + "location.replace('wedding.html');"
@@ -343,6 +382,7 @@
                 else if(camera1.equals("3500"))
                 {
                      cameravideo=1250;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 3500');"
                           + "location.replace('wedding.html');"
@@ -351,6 +391,7 @@
                 else if(camera1.equals("1400"))
                 {
                      cameravideo=1400;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 1400');"
                           + "location.replace('wedding.html');"
@@ -358,6 +399,7 @@
                 }else if(camera1.equals("3650"))
                 {
                      cameravideo=3650;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 3650');"
                           + "location.replace('wedding.html');"
@@ -365,6 +407,7 @@
                 }else if(camera1.equals("1800"))
                 {
                      cameravideo=1800;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 1800');"
                           + "location.replace('wedding.html');"
@@ -373,6 +416,7 @@
                 else if(camera1.equals("3800"))
                 {
                      cameravideo=1250;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 3800');"
                           + "location.replace('wedding.html');"
@@ -381,6 +425,7 @@
                 else if(camera1.equals("22000"))
                 {
                      cameravideo=22000;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 22000');"
                           + "location.replace('wedding.html');"
@@ -389,6 +434,7 @@
                 else if(camera1.equals("16000"))
                 {
                      cameravideo=16000;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 16000');"
                           + "location.replace('wedding.html');"
@@ -397,6 +443,7 @@
                 else if(camera1.equals("10000"))
                 {
                      cameravideo=10000;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 10000');"
                           + "location.replace('wedding.html');"
@@ -405,6 +452,7 @@
                 else if(camera1.equals("12000"))
                 {
                      cameravideo=12000;
+                     cn="CAMERA & VIDEO GRAPH";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAMERA VIDEO PRICE IS 12000');"
                           + "location.replace('wedding.html');"
@@ -469,6 +517,7 @@
                 if(cater1.equals("5000"))
                 {
                      catering=5000;
+                     catn="CATERING";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CATERING PRICE IS 5000');"
                           + "location.replace('wedding.html');"
@@ -528,6 +577,7 @@
                 if(cake1.equals("1000"))
                 {
                      cake=1000;
+                     cn="VANILLA CAKES";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAKE PRICE IS 1000');"
                           + "location.replace('wedding.html');"
@@ -587,6 +637,7 @@
                 if(makeup1.equals("10000"))
                 {
                      makeup=10000;
+                     mn="CHRISTIAN";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR MAKEUP PRICE IS 10000');"
                           + "location.replace('wedding.html');"
@@ -694,6 +745,7 @@
                 if(car1.equals("10000"))
                 {
                      car=10000;
+                     carn="AUDI";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR CAR PRICE IS 10000');"
                           + "location.replace('wedding.html');"
@@ -729,6 +781,7 @@
                 if(honey1.equals("20000"))
                 {
                      honeymoon=20000;
+                     hn="ANDAMAN NICOBAR";
                      out.println("<script type='text/javascript'>"
                           + "alert('YOUR HONEYMOON PRICE IS 20000');"
                           + "location.replace('wedding.html');"
@@ -2095,6 +2148,7 @@
             String wedtotal;
             if(submit!=null)
             {
+                try{
                 out.println(stage);
                 out.println(decoration);
                 out.println(lightsound);
@@ -2103,14 +2157,42 @@
                 out.println(cake);
                 out.println(makeup);
                 out.println(honeymoon);
-                
+                out.println(" sn= "+sn+" dn= "+dn+" lsn= "+lsn+" cvn=  "+cvn+" catn= "+catn+" cn= "+cn+" mn= "+mn+" carn= "+carn+" hn= "+hn);
                 total=stage+decoration+lightsound+cameravideo+catering+cake+makeup+honeymoon;
-        
-                request.setAttribute("total", String.valueOf(total));
-                getServletConfig().getServletContext()
-                .getRequestDispatcher("/Total_display")
-                .forward(request, response);
-
+                
+                session.setAttribute("total", String.valueOf(total));
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Event","root","");
+                PreparedStatement ps1=con.prepareStatement("insert into wedding values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                String name= session.getAttribute("name").toString();
+                ps1.setString(1,name);
+                ps1.setString(1,sn);
+                ps1.setString(2,stage+"");
+                ps1.setString(3,dn);
+                ps1.setString(4,decoration+"");
+                ps1.setString(5,lsn);
+                ps1.setString(6,lightsound+"");
+                ps1.setString(7,cvn);
+                ps1.setString(8,cameravideo+"");
+                ps1.setString(9,catn);
+                ps1.setString(10,catering+"");
+                ps1.setString(11,cn);
+                ps1.setString(12,cake+"");
+                ps1.setString(13,mn);
+                ps1.setString(14,makeup+"");
+                ps1.setString(15,carn);
+                ps1.setString(16,car+"");
+                ps1.setString(17,hn);
+                ps1.setString(18,honeymoon+"");
+                
+                ps1.executeUpdate();
+                
+                request.getRequestDispatcher("/Total_display").forward(request, response);
+            }
+                catch(Exception ex)
+            {
+                out.println(ex);
+            }
             }
 
         %>  

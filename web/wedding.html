@@ -127,9 +127,7 @@ and open the template in the editor.
     <body>
             <div class="main">
             <h1><center><b>WEDDING</b></center></h1>
-            <form action="Totals.jsp">
-                <center><input type="submit" name="sub" class="buttonsub" value="SUBMIT"></center>
-            </form>
+            
             <hr>
 
             <div id="myBtnContainer">
@@ -144,12 +142,13 @@ and open the template in the editor.
                 <button class="btn" onclick="filterSelection('car')">CAR HIRE FOR BRIDE , GROOM & FAMILY</button>
                 <button class="btn" onclick="filterSelection('honeymoon')">HONEY MOON PACKAGES</button>
             </div>
-            
+            <form action="Totals.jsp" method="POST">
+                <center><input type="submit" name="sub" class="buttonsub" value="SUBMIT"></center>
             <div class="row">   
             <div class="column stage">
                 <div class="content">
                 <img src="stage5.jpg" style="width:300px; height:200px">
-                <form action="Totals.jsp" method="POST">
+                
                     <h4>THEME BASED</h4>
                     <p><i class='fas fa-rupee-sign'></i> 25000/-</p>
                     <p>SELECTED: <input type="radio" name="stage1" id="myCheck1" onchange="showPrice()"  value="25000" onclick="myFunction()"></p>
@@ -985,7 +984,7 @@ and open the template in the editor.
             this.className += " active";
           });
         }
-        </script>            
+        </script> 
     </body>
 </html>
     

@@ -46,9 +46,6 @@ public class UserServiceWed extends HttpServlet {
             {
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Event","root","");
-                PreparedStatement ps1 = con.prepareStatement("insert into wedding values(?,?)");
-    
-                ps1.executeUpdate();
                 PreparedStatement ps = con.prepareStatement("select * from wedding");
                 ResultSet rs = ps.executeQuery();
                 
@@ -56,6 +53,7 @@ public class UserServiceWed extends HttpServlet {
 
                 out.println("<table border=5 width=100% height=100% align=center>"
                         + "<tr>"
+                        +"<th> Name </th>"
                         + "<th>STAGE </th>"
                         + "<th>STAGE_PRICE</th>"
                         +"<th>DECORATION</th>"
@@ -98,7 +96,7 @@ public class UserServiceWed extends HttpServlet {
                     String honeymoonprice = rs.getString(18);
                     
  
-                    out.println("<tr align=center >"+ "<td >" +stage+"<td width ='20%' >"+stageprice+"<td > "+decoration+"<td > "+ decorationprice +" <td > "+lightsound+"<td > "+lightsoundprice+"<td > "+cameravideo+"<td > "+cameravideoprice+"<td > "+catering+"<td > "+cateringprice+"<td > "+cake+"<td > "+cakeprice+"<td > "+makeup+"<td > "+makeupprice+"<td > "+car+"<td > "+carprice+"<td > "+honeymoon+"<td > "+honeymoonprice+"</tr>");
+                    out.println("<tr align=center ><td>"+rs.getString("name")+"</td>"+ "<td >" +stage+"<td width ='20%' >"+stageprice+"<td > "+decoration+"<td > "+ decorationprice +" <td > "+lightsound+"<td > "+lightsoundprice+"<td > "+cameravideo+"<td > "+cameravideoprice+"<td > "+catering+"<td > "+cateringprice+"<td > "+cake+"<td > "+cakeprice+"<td > "+makeup+"<td > "+makeupprice+"<td > "+car+"<td > "+carprice+"<td > "+honeymoon+"<td > "+honeymoonprice+"</tr>");
                     out.println("<br>");
                     out.println("<br>"); 
                     

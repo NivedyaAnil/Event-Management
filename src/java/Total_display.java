@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -51,8 +52,8 @@ public class Total_display extends HttpServlet {
             out.println("<body>");
             
             out.println("<img src=box1.jpeg alt=Image1>");
-            
-            String total=(String) request.getAttribute("total");
+            HttpSession session = request.getSession(false);
+            String total=session.getAttribute("total").toString();
             out.println("<html><body><script>alert('Total Amount is "+total+"');window.location.assign('index.html');</script></body></html>"); 
             
             out.println("</body>");
