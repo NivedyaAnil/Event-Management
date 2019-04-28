@@ -2312,6 +2312,8 @@
 
 <!--get-->
 
+
+
         <% 
             String wedtotal;
             if(submit!=null)
@@ -2423,9 +2425,9 @@
  
         
         
- /*       
+ /* 
+      
         <% 
-            //String wedtotal;
             if(submit!=null)
             {
                 out.println(stage);
@@ -2441,7 +2443,7 @@
                     out.println(lanterns);
                     
                 
-                total=stage+decoration+lightsound+cameravideo+catering+cake+makeup+honeymoon+   car+dj+lanterns;
+                total=stage+decoration+lightsound+cameravideo+catering+cake+makeup+honeymoon+car+dj+lanterns;
 
         //      alert("${variable}");
               
