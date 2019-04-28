@@ -34,28 +34,29 @@ public class Detail extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Detail</title>");    
-               out.println("<style> .bg-text {\n" +
-"  background-color: rgb(0,0,0); /* Fallback color */\n" +
-"  background-color: rgba(0,0,0, 0.2); /* Black w/opacity/see-through */\n" +
-"  color: black;\n" +
-"  font-weight: bold;\n" +
-"  border: 0 solid #f1f1f1;\n" +
-"  position: absolute;\n" +
-"  top: 30%;\n" +
-"  left: 50%;\n" +
-"  transform: translate(-50%, -38%);\n" +
-"  z-index: 2;\n" +
-"  width: 55%;\n" +
-"  \n" +
-"  text-align:left;\n" +
-"}\n" +
-"</style>");
+            out.println("<title>Servlet Detail</title>");
+            
+            out.println("<style> .bg-text {\n" +
+                        "  background-color: rgb(0,0,0); /* Fallback color */\n" +
+                        "  background-color: rgba(0,0,0, 0.2); /* Black w/opacity/see-through */\n" +
+                        "  color: black;\n" +
+                        "  font-weight: bold;\n" +
+                        "  border: 0 solid #f1f1f1;\n" +
+                        "  position: absolute;\n" +
+                        "  top: 30%;\n" +
+                        "  left: 50%;\n" +
+                        "  transform: translate(-50%, -38%);\n" +
+                        "  z-index: 2;\n" +
+                        "  width: 55%;\n" +
+                        "  \n" +
+                        "  text-align:left;\n" +
+                        "}\n" +
+                        "</style>");
             out.println("</head>");
             out.println("<body>");
             
             out.println("<img src=box1.jpeg alt=Image1>");
-             out.println("<div class='bg-text'>");
+            out.println("<div class='bg-text'>");
             try
             {
                 Class.forName("com.mysql.jdbc.Driver");
