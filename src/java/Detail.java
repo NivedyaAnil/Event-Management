@@ -75,7 +75,7 @@ public class Detail extends HttpServlet {
                         + "</tr>");
                 while(rs.next())
                 {
-                      String name = rs.getString(1);
+                    String name = rs.getString(1);
                     String event = rs.getString(2);
                     int person = rs.getInt(3);
                     String dt = rs.getString(4);
