@@ -2407,10 +2407,8 @@
                 ps4.setString(16,cake+"");  
                 ps4.executeUpdate();
                 
-            /*    request.setAttribute("total", String.valueOf(total));
-                getServletConfig().getServletContext()
-                .getRequestDispatcher("/Total_display")
-                .forward(request, response);
+            /*  request.setAttribute("total", String.valueOf(total));
+                getServletConfig().getServletContext().getRequestDispatcher("/Total_display").forward(request, response);
             */
                 
                 request.getRequestDispatcher("/Total_display").forward(request, response);
@@ -2421,7 +2419,50 @@
             }
             }
 
+        %> 
+ 
+        
+        
+ /*       
+        <% 
+            //String wedtotal;
+            if(submit!=null)
+            {
+                out.println(stage);
+                out.println(decoration);
+                out.println(lightsound);
+                out.println(cameravideo);
+                out.println(catering);
+                out.println(cake);
+                out.println(makeup);
+                out.println(honeymoon);
+                
+                total=stage+decoration+lightsound+cameravideo+catering+cake+makeup+honeymoon;
+
+        //      alert("${variable}");
+              
+        /*      out.println("<script type='text/javascript'>"
+                          + "window.alert(${total});"
+                          + "location.replace('wedding.html');"
+                          + "</script>");
+        */
+        
+                request.setAttribute("total", String.valueOf(total));
+                getServletConfig().getServletContext()
+                .getRequestDispatcher("/Total_display")
+                .forward(request, response);
+                
+        /*      out.write("alert('TOTAL PRICE+" + total + "')");
+                String t=String.valueOf(total);
+                out.println(t);
+                out.println("<script type='text/javascript'>"
+                          + "alert('total='+t);" 
+                          + "</script>");
+        */
+            }
+
         %>  
-       
+*/
+
     </body>
 </html>

@@ -33,6 +33,7 @@ public class Total_display extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             
+            
            String stage1 = request.getParameter("stage1");
            String dec1 = request.getParameter("dec1");
            String light1 = request.getParameter("light1");
@@ -53,14 +54,20 @@ public class Total_display extends HttpServlet {
             
             out.println("<img src=box1.jpeg alt=Image1>");
             
+            
             HttpSession session = request.getSession(false);
-            
             String total=session.getAttribute("total").toString();
-            
             out.println("<html><body><script>alert('Total Amount is "+total+"');window.location.assign('index.html');</script></body></html>");
             
             //String total=(String) request.getAttribute("total");
             //out.println("<html><body><script>alert('Total Amount is "+total+"');window.location.assign('index.html');</script></body></html>");
+            
+            
+            
+           
+            /*    String total=(String) request.getAttribute("total");
+                out.println("<html><body><script>alert('Total Amount is "+total+"');window.location.assign('index.html');</script></body></html>");
+            */    
             
             out.println("</body>");
             out.println("</html>");
