@@ -11,7 +11,5 @@
 public class MyGlobals 
 {
     public static String mail="";
-    public static int stage1;
-    public static String dec1="";
-    public static int gt=0;
+    
 }
