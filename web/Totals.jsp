@@ -2435,9 +2435,13 @@
                 out.println(catering);
                 out.println(cake);
                 out.println(makeup);
+                    out.println(car);
                 out.println(honeymoon);
+                    out.println(dj);
+                    out.println(lanterns);
+                    
                 
-                total=stage+decoration+lightsound+cameravideo+catering+cake+makeup+honeymoon;
+                total=stage+decoration+lightsound+cameravideo+catering+cake+makeup+honeymoon+   car+dj+lanterns;
 
         //      alert("${variable}");
               
