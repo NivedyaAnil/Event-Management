@@ -96,7 +96,7 @@ public class RegisterServlet extends HttpServlet {
                 ps.executeUpdate();
                 
                 HttpSession session = request.getSession(false);
-                session.setAttribute("name", name);
+                session.setAttribute("email", email);
                 con.close();
                 
             }

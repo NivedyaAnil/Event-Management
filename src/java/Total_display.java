@@ -55,13 +55,13 @@ public class Total_display extends HttpServlet {
             out.println("<img src=box1.jpeg alt=Image1>");
             
             
-            //HttpSession session = request.getSession(false);
-           // String total=session.getAttribute("total").toString();
-            //out.println("<html><body><script>alert('Total Amount is "+total+"');window.location.assign('index.html');</script></body></html>");
+            HttpSession session = request.getSession(false);
+            String total=session.getAttribute("total").toString();
+           out.println("<html><body><script>alert('Total Amount is "+total+"');window.location.assign('index.html');</script></body></html>");
 
             
-            String total=(String) request.getAttribute("total");
-            out.println("<html><body><script>alert('Total Amount is "+total+"');window.location.assign('index.html');</script></body></html>");
+           //String total=(String) request.getAttribute("total");
+            //out.println("<html><body><script>alert('Total Amount is "+total+"');window.location.assign('index.html');</script></body></html>");
 
             out.println("</body>");
             out.println("</html>");
