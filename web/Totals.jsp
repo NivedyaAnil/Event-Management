@@ -2339,7 +2339,124 @@
      
             }
 
-        %>  
+        %> 
+  
+        
+        
+        
+        
+        <% 
+            
+            if(submit!=null)
+            {
+                try{
+                out.println(stage);
+                out.println(decoration);
+                out.println(lightsound);
+                out.println(cameravideo);
+                out.println(catering);
+                out.println(cake);
+                out.println(makeup);
+                out.println(honeymoon);
+                
+                out.println(" sn= "+sn+" dn= "+dn+" lsn= "+lsn+" cvn=  "+cvn+" catn= "+catn+" cn= "+cn+" mn= "+mn+" carn= "+carn+" hn= "+hn);
+                
+                total=stage+decoration+lightsound+cameravideo+catering+cake+makeup+honeymoon;
+                session.setAttribute("total", String.valueOf(total));
+                
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Event","root","");
+                PreparedStatement ps1=con.prepareStatement("insert into wedding values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                
+                //String name= session.getAttribute("name").toString();
+                //ps1.setString(1,name);
+                
+                ps1.setString(1,sn);
+                ps1.setString(2,stage+"");
+                ps1.setString(3,dn);
+                ps1.setString(4,decoration+"");
+                ps1.setString(5,lsn);
+                ps1.setString(6,lightsound+"");
+                ps1.setString(7,cvn);
+                ps1.setString(8,cameravideo+"");
+                ps1.setString(9,catn);
+                ps1.setString(10,catering+"");
+                ps1.setString(11,cn);
+                ps1.setString(12,cake+"");
+                ps1.setString(13,mn);
+                ps1.setString(14,makeup+"");
+                ps1.setString(15,carn);
+                ps1.setString(16,car+"");
+                ps1.setString(17,hn);
+                ps1.setString(18,honeymoon+"");   
+                ps1.executeUpdate();
+                
+                PreparedStatement ps2=con.prepareStatement("insert into birthday values(?,?,?,?,?,?,?,?,?,?,?,?)");
+                ps2.setString(1,sn);
+                ps2.setString(2,stage+"");
+                ps2.setString(3,dn);
+                ps2.setString(4,decoration+"");
+                ps2.setString(5,lsn);
+                ps2.setString(6,lightsound+"");
+                ps2.setString(7,cvn);
+                ps2.setString(8,cameravideo+"");
+                ps2.setString(9,catn);
+                ps2.setString(10,catering+"");
+                ps2.setString(11,cn);
+                ps2.setString(12,cake+"");  
+                ps2.executeUpdate();
+                
+                PreparedStatement ps3=con.prepareStatement("insert into party values(?,?,?,?,?,?,?,?,?,?,?,?)");
+                ps3.setString(1,sn);
+                ps3.setString(2,stage+"");
+                ps3.setString(3,dn);
+                ps3.setString(4,decoration+"");
+                ps3.setString(5,lsn);
+                ps3.setString(6,lightsound+"");
+                ps3.setString(7,djn);
+                ps3.setString(8,dj+"");
+                ps3.setString(9,cvn);
+                ps3.setString(10,cameravideo+"");
+                ps3.setString(11,catn);
+                ps3.setString(12,catering+"");   
+                ps3.executeUpdate();
+                
+                PreparedStatement ps4=con.prepareStatement("insert into gettogether values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                ps4.setString(1,sn);
+                ps4.setString(2,stage+"");
+                ps4.setString(3,dn);
+                ps4.setString(4,decoration+"");
+                ps4.setString(5,lsn);
+                ps4.setString(6,lightsound+"");
+                ps4.setString(7,djn);
+                ps4.setString(8,dj+"");
+                ps4.setString(9,ln);
+                ps4.setString(10,lanterns+"");
+                ps4.setString(11,cvn);
+                ps4.setString(12,cameravideo+"");
+                ps4.setString(13,catn);
+                ps4.setString(14,catering+"");
+                ps4.setString(15,cn);
+                ps4.setString(16,cake+"");  
+                ps4.executeUpdate();
+                
+            /*  request.setAttribute("total", String.valueOf(total));
+                getServletConfig().getServletContext().getRequestDispatcher("/Total_display").forward(request, response);
+            */
+                
+                request.getRequestDispatcher("/Total_display").forward(request, response);
+            }
+                catch(Exception ex)
+            {
+                out.println(ex);
+            }
+            }
+
+        %> 
+ 
+        
+       
+ /* 
        
     </body>
 
