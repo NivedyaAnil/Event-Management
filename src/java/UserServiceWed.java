@@ -53,7 +53,7 @@ public class UserServiceWed extends HttpServlet {
 
                 out.println("<table border=5 width=100% height=100% align=center>"
                         + "<tr>"
-                        +"<th> Name </th>"
+                        +"<th> EMAIL </th>"
                         + "<th>STAGE </th>"
                         + "<th>STAGE_PRICE</th>"
                         +"<th>DECORATION</th>"
@@ -76,27 +76,28 @@ public class UserServiceWed extends HttpServlet {
    
                 while(rs.next())
                 {
-                    String stage = rs.getString(1);
-                    String stageprice = rs.getString(2);
-                    String decoration = rs.getString(3);
-                    String decorationprice = rs.getString(4);
-                    String lightsound = rs.getString(5);
-                    String lightsoundprice = rs.getString(6);
-                    String cameravideo = rs.getString(7);
-                    String cameravideoprice = rs.getString(8);
-                    String catering = rs.getString(9);
-                    String cateringprice = rs.getString(10);
-                    String cake = rs.getString(11);
-                    String cakeprice = rs.getString(12);
-                    String makeup = rs.getString(13);
-                    String makeupprice = rs.getString(14);
-                    String car = rs.getString(15);
-                    String carprice = rs.getString(16);
-                    String honeymoon = rs.getString(17);
-                    String honeymoonprice = rs.getString(18);
+                    
+                    String stage = rs.getString(2);
+                    String stageprice = rs.getString(3);
+                    String decoration = rs.getString(4);
+                    String decorationprice = rs.getString(5);
+                    String lightsound = rs.getString(6);
+                    String lightsoundprice = rs.getString(7);
+                    String cameravideo = rs.getString(8);
+                    String cameravideoprice = rs.getString(9);
+                    String catering = rs.getString(10);
+                    String cateringprice = rs.getString(11);
+                    String cake = rs.getString(12);
+                    String cakeprice = rs.getString(13);
+                    String makeup = rs.getString(14);
+                    String makeupprice = rs.getString(15);
+                    String car = rs.getString(16);
+                    String carprice = rs.getString(17);
+                    String honeymoon = rs.getString(18);
+                    String honeymoonprice = rs.getString(19);
                     
  
-                    out.println("<tr align=center ><td>"+rs.getString("name")+"</td>"+ "<td >" +stage+"<td width ='20%' >"+stageprice+"<td > "+decoration+"<td > "+ decorationprice +" <td > "+lightsound+"<td > "+lightsoundprice+"<td > "+cameravideo+"<td > "+cameravideoprice+"<td > "+catering+"<td > "+cateringprice+"<td > "+cake+"<td > "+cakeprice+"<td > "+makeup+"<td > "+makeupprice+"<td > "+car+"<td > "+carprice+"<td > "+honeymoon+"<td > "+honeymoonprice+"</tr>");
+                    out.println("<tr align=center ><td>"+rs.getString("email")+"</td>"+ "<td >" +stage+"<td width ='20%' >"+stageprice+"<td > "+decoration+"<td > "+ decorationprice +" <td > "+lightsound+"<td > "+lightsoundprice+"<td > "+cameravideo+"<td > "+cameravideoprice+"<td > "+catering+"<td > "+cateringprice+"<td > "+cake+"<td > "+cakeprice+"<td > "+makeup+"<td > "+makeupprice+"<td > "+car+"<td > "+carprice+"<td > "+honeymoon+"<td > "+honeymoonprice+"</tr>");
                     out.println("<br>");
                     out.println("<br>"); 
                     

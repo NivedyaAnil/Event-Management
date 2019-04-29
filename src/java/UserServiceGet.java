@@ -52,6 +52,7 @@ public class UserServiceGet extends HttpServlet {
 
                 out.println("<table border=5 width=100% height=100% align=center>"
                         + "<tr>"
+                        +"<th> EMAIL </th>"
                         + "<th>STAGE </th>"
                         + "<th>STAGE_PRICE</th>"
                         +"<th>DECORATION</th>"
@@ -72,24 +73,24 @@ public class UserServiceGet extends HttpServlet {
    
                 while(rs.next())
                 {
-                    String stage = rs.getString(1);
-                    String stageprice = rs.getString(2);
-                    String decoration = rs.getString(3);
-                    String decorationprice = rs.getString(4);
-                    String lightsound = rs.getString(5);
-                    String lightsoundprice = rs.getString(6);
-                    String dj=rs.getString(7);
-                    String djprice=rs.getString(8);
-                    String lanterns=rs.getString(9);
-                    String lanternsprice=rs.getString(10);
-                    String cameravideo = rs.getString(11);
-                    String cameravideoprice = rs.getString(12);
-                    String catering = rs.getString(13);
-                    String cateringprice = rs.getString(14);
-                    String cake = rs.getString(15);
-                    String cakeprice = rs.getString(16);
+                    String stage = rs.getString(2);
+                    String stageprice = rs.getString(3);
+                    String decoration = rs.getString(4);
+                    String decorationprice = rs.getString(5);
+                    String lightsound = rs.getString(6);
+                    String lightsoundprice = rs.getString(7);
+                    String dj=rs.getString(8);
+                    String djprice=rs.getString(9);
+                    String lanterns=rs.getString(10);
+                    String lanternsprice=rs.getString(11);
+                    String cameravideo = rs.getString(12);
+                    String cameravideoprice = rs.getString(13);
+                    String catering = rs.getString(14);
+                    String cateringprice = rs.getString(15);
+                    String cake = rs.getString(16);
+                    String cakeprice = rs.getString(17);
                     
-                    out.println("<tr align=center >"+ "<td >" +stage+"<td width ='20%' >"+stageprice+"<td > "+decoration+"<td > "+ decorationprice +" <td > "+lightsound+"<td > "+lightsoundprice+"<td > "+dj+"<td > "+djprice+"<td > "+lanterns+"<td > "+lanternsprice+"<td >"+cameravideo+"<td > "+cameravideoprice+"<td > "+catering+"<td > "+cateringprice+"<td > "+cake+"<td > "+cakeprice+"<td >  </tr>");
+                    out.println("<tr align=center ><td>"+rs.getString("email")+"</td>"+ "<td >" +stage+"<td width ='20%' >"+stageprice+"<td > "+decoration+"<td > "+ decorationprice +" <td > "+lightsound+"<td > "+lightsoundprice+"<td > "+dj+"<td > "+djprice+"<td > "+lanterns+"<td > "+lanternsprice+"<td >"+cameravideo+"<td > "+cameravideoprice+"<td > "+catering+"<td > "+cateringprice+"<td > "+cake+"<td > "+cakeprice+"<td >  </tr>");
                     out.println("<br>");
                     out.println("<br>"); 
                     
