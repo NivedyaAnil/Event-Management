@@ -45,7 +45,7 @@ public class UserServiceGet extends HttpServlet {
             {
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Event","root","");
-                PreparedStatement ps = con.prepareStatement("select * from wedding");
+                PreparedStatement ps = con.prepareStatement("select * from gettogether");
                 ResultSet rs = ps.executeQuery();
                 
                 out.println("<html><head></head><body background='box2.jpeg'><center><img src=\"icon.PNG\" height=\"150px\" width=\"250px\"></center><p><font size='32px' face='monotype corsiva'><center> YOUR DETAILS HAVE BEEN ADDED....</center></font></p></body></html>\n ");
