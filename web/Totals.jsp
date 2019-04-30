@@ -28,7 +28,7 @@
            int dj=0;
            int lanterns=0;
            int total=0;
-           
+           String decision ="";
            String   sn="",dn="",lsn="",cvn="",catn="",cn="",mn="",carn="",hn="",djn="",ln="";
         %>  
        
@@ -44,9 +44,10 @@
            String car1 = request.getParameter("car1");
            String honey1 = request.getParameter("honey1");
            String submit=request.getParameter("sub");
-   
+           
             if(stage1!=null)
             {
+                decision = "wedding";
                 if(stage1.equals("25000"))
                 {
                      stage=25000;
@@ -142,6 +143,7 @@
             
             if(dec1!=null)
             {
+                decision = "wedding";
                 if(dec1.equals("1000"))
                 {
                      decoration=1000;
@@ -207,6 +209,7 @@
             
             if(light1!=null)
             {
+                decision = "wedding";
                 if(light1.equals("1200"))
                 {
                      lightsound=1200;
@@ -272,6 +275,7 @@
             
             if(camera1!=null)
             {
+                decision = "wedding";
                 if(camera1.equals("10000"))
                 {
                      cameravideo=10000;
@@ -526,6 +530,7 @@
             
             if(cater1!=null)
             {
+                decision = "wedding";
                 if(cater1.equals("5000"))
                 {
                      catering=5000;
@@ -591,6 +596,7 @@
             
             if(cake1!=null)
             {
+                decision = "wedding";
                 if(cake1.equals("1000"))
                 {
                      cake=1000;
@@ -656,6 +662,7 @@
             
             if(makeup1!=null)
             {
+                decision = "wedding";
                 if(makeup1.equals("10000"))
                 {
                      makeup=10000;
@@ -775,6 +782,7 @@
             
             if(car1!=null)
             {
+                decision = "wedding";
                 if(car1.equals("10000"))
                 {
                      car=10000;
@@ -813,6 +821,7 @@
             
             if(honey1!=null)
             {
+                decision = "wedding";
                 if(honey1.equals("20000"))
                 {
                      honeymoon=20000;
@@ -906,7 +915,8 @@
      
        %>
       
-<!--wed-->       	 
+<!--wed--> 
+
         <% 
            String stage2 = request.getParameter("stage2");
            String dec2 = request.getParameter("dec2");
@@ -917,6 +927,7 @@
            
             if(stage2!=null)
             {
+                decision = "birthday";
                 if(stage2.equals("5000"))
                 {
                      stage=5000;
@@ -1009,6 +1020,7 @@
             
             if(dec2!=null)
             {
+                decision = "birthday";
                 if(dec2.equals("2000"))
                 {
                      decoration=2000;
@@ -1074,6 +1086,7 @@
             
             if(light2!=null)
             {
+                decision = "birthday";
                 if(light2.equals("1000"))
                 {
                      lightsound=1000;
@@ -1139,6 +1152,7 @@
             
             if(camera2!=null)
             {
+                decision = "birthday";
                 if(camera2.equals("5000"))
                 {
                      cameravideo=5000;
@@ -1204,6 +1218,7 @@
             
             if(cater2!=null)
             {
+                decision = "birthday";
                 if(cater2.equals("3500"))
                 {
                      catering=3500;
@@ -1269,6 +1284,7 @@
             
             if(cake2!=null)
             {
+                decision = "birthday";
                 if(cake2.equals("1000"))
                 {
                      cake=1000;
@@ -1372,6 +1388,7 @@
            
             if(stage3!=null)
             {
+                decision = "party";
                 if(stage3.equals("5000"))
                 {
                      stage=5000;
@@ -1437,6 +1454,7 @@
             
             if(dec3!=null)
             {
+                decision = "party";
                 if(dec3.equals("2000"))
                 {
                      decoration=2000;
@@ -1502,6 +1520,7 @@
             
             if(light3!=null)
             {
+                decision = "party";
                 if(light3.equals("1500"))
                 {
                      lightsound=1500;
@@ -1567,6 +1586,7 @@
             
 	    if(dj3!=null)
             {
+                decision = "party";
                 if(dj3.equals("2000"))
                 {
                      dj=2000;
@@ -1632,6 +1652,7 @@
 
             if(camera3!=null)
             {
+                decision = "party";
                 if(camera3.equals("3000"))
                 {
                      cameravideo=3000;
@@ -1697,6 +1718,7 @@
             
             if(cater3!=null)
             {
+                decision = "party";
                 if(cater3.equals("1500"))
                 {
                      catering=1500;
@@ -1776,6 +1798,7 @@
            
             if(stage4!=null)
             {
+                decision = "gettogether";
                 if(stage4.equals("11000"))
                 {
                      stage=11000;
@@ -1805,10 +1828,10 @@
                 }
                 else if(stage4.equals("5000"))
                 {
-                     stage=55000;
+                     stage=5000;
                      sn="STAGE";
                      out.println("<script type='text/javascript'>"
-                          + "alert('YOUR STAGE PRICE IS 55000');"
+                          + "alert('YOUR STAGE PRICE IS 5000');"
                           + "location.replace('gettogether.html');"
                           + "</script>");
                 }
@@ -1868,6 +1891,7 @@
             
             if(dec4!=null)
             {
+                decision = "gettogether";
                 if(dec4.equals("2000"))
                 {
                      decoration=2000;
@@ -1933,6 +1957,7 @@
             
             if(light4!=null)
             {
+                decision = "gettogether";
                 if(light4.equals("4500"))
                 {
                      lightsound=4500;
@@ -1998,6 +2023,7 @@
             
 	    if(dj4!=null)
             {
+                decision = "gettogether";
                 if(dj4.equals("4200"))
                 {
                      dj=4200;
@@ -2063,6 +2089,7 @@
 
 	    if(lanterns4!=null)
             {
+                decision = "gettogether";
                 if(lanterns4.equals("1900"))
                 {
                      lanterns=1900;
@@ -2119,6 +2146,7 @@
 
             if(camera4!=null)
             {
+                decision = "gettogether";
                 if(camera4.equals("4000"))
                 {
                      cameravideo=4000;
@@ -2184,6 +2212,7 @@
             
             if(cater4!=null)
             {
+                decision = "gettogether";
                 if(cater4.equals("4000"))
                 {
                      catering=4000;
@@ -2249,6 +2278,7 @@
             
             if(cake4!=null)
             {
+                decision = "gettogether";
                 if(cake4.equals("1900"))
                 {
                      cake=1900;
@@ -2260,10 +2290,10 @@
                 }    
                 else if(cake4.equals("1000"))
                 {
-                     cake=1200;
+                     cake=1000;
                      cn="WHITE FOREST CAKES";
                      out.println("<script type='text/javascript'>"
-                          + "alert('YOUR CAKE PRICE IS 1200');"
+                          + "alert('YOUR CAKE PRICE IS 1000');"
                           + "location.replace('gettogether.html');"
                           + "</script>");
                 }
@@ -2322,7 +2352,7 @@
         
         
         
-   <% 
+      <% 
             
             if(submit!=null)
             {
@@ -2334,20 +2364,27 @@
                 out.println(catering);
                 out.println(cake);
                 out.println(makeup);
+                out.println(car);
                 out.println(honeymoon);
+                out.println(dj);
+                out.println(lanterns);
                 
                 out.println(" sn= "+sn+" dn= "+dn+" lsn= "+lsn+" cvn=  "+cvn+" catn= "+catn+" cn= "+cn+" mn= "+mn+" carn= "+carn+" hn= "+hn);
                 
-                total=stage+decoration+lightsound+cameravideo+catering+cake+makeup+honeymoon;
+                total=stage+decoration+lightsound+cameravideo+catering+cake+makeup+honeymoon+car+dj+lanterns;
                 session.setAttribute("total", String.valueOf(total));
+                
+                request.getRequestDispatcher("/Total_display").forward(request, response);
                 
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Event","root","");
                 PreparedStatement ps1=con.prepareStatement("insert into wedding values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
                 
                 String name= session.getAttribute("email").toString();
-                ps1.setString(1,name);
                 
+                if(decision.equals("wedding"))
+                {
+                ps1.setString(1,name); 
                 ps1.setString(2,sn);
                 ps1.setString(3,stage+"");
                 ps1.setString(4,dn);
@@ -2367,9 +2404,12 @@
                 ps1.setString(18,hn);
                 ps1.setString(19,honeymoon+"");   
                 ps1.executeUpdate();
+                }
                 
-               PreparedStatement ps2=con.prepareStatement("insert into birthday values(?,?,?,?,?,?,?,?,?,?,?,?,?)");
-               ps2.setString(1,name);
+                if(decision.equals("birthday"))
+                {
+                PreparedStatement ps2=con.prepareStatement("insert into birthday values(?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                ps2.setString(1,name);
                 ps2.setString(2,sn);
                 ps2.setString(3,stage+"");
                 ps2.setString(4,dn);
@@ -2383,23 +2423,28 @@
                 ps2.setString(12,cn);
                 ps2.setString(13,cake+"");  
                 ps2.executeUpdate();
+                }
                 
+                if(decision.equals("party"))
+                {
                 PreparedStatement ps3=con.prepareStatement("insert into party values(?,?,?,?,?,?,?,?,?,?,?,?,?)");
                 ps3.setString(1,name);
                 ps3.setString(2,sn);
                 ps3.setString(3,stage+"");
                 ps3.setString(4,dn);
                 ps3.setString(5,decoration+"");
-               ps3.setString(6,lsn);
-               ps3.setString(7,lightsound+"");
+                ps3.setString(6,lsn);
+                ps3.setString(7,lightsound+"");
                 ps3.setString(8,djn);
-               ps3.setString(9,dj+"");
+                ps3.setString(9,dj+"");
                 ps3.setString(10,cvn);
                 ps3.setString(11,cameravideo+"");
                 ps3.setString(12,catn);
                 ps3.setString(13,catering+"");   
                 ps3.executeUpdate();
-               
+                }
+                if(decision.equals("gettogether"))
+                {
                 PreparedStatement ps4=con.prepareStatement("insert into gettogether values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
                 ps4.setString(1,name);
                 ps4.setString(2,sn);
@@ -2411,20 +2456,21 @@
                 ps4.setString(8,djn);
                 ps4.setString(9,dj+"");
                 ps4.setString(10,ln);
-               ps4.setString(11,lanterns+"");
-               ps4.setString(12,cvn);
+                ps4.setString(11,lanterns+"");
+                ps4.setString(12,cvn);
                 ps4.setString(13,cameravideo+"");
                 ps4.setString(14,catn);
-               ps4.setString(15,catering+"");
-               ps4.setString(16,cn);
+                ps4.setString(15,catering+"");
+                ps4.setString(16,cn);
                 ps4.setString(17,cake+"");  
                 ps4.executeUpdate();
+                }
                 
             /*  request.setAttribute("total", String.valueOf(total));
                 getServletConfig().getServletContext().getRequestDispatcher("/Total_display").forward(request, response);
             */
                 
-                request.getRequestDispatcher("/Total_display").forward(request, response);
+                
             }
                 catch(Exception ex)
             {
@@ -2433,6 +2479,7 @@
             }
 
         %> 
+
  
 
     </body>

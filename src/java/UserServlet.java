@@ -47,7 +47,7 @@ public class UserServlet extends HttpServlet
                 PreparedStatement ps = con.prepareStatement("select * from event_register");
                 ResultSet rs = ps.executeQuery();
                 
-                out.println("<html><head></head><body background='box2.jpeg'><center><img src=\"icon.PNG\" height=\"150px\" width=\"250px\"></center><p><font size='32px' face='monotype corsiva'><center> YOUR DETAILS HAVE BEEN ADDED....</center></font></p></body></html>\n ");
+                out.println("<html><head></head><body background='box2.jpeg'><center><img src=\"icon.PNG\" height=\"150px\" width=\"250px\"></center><p><font size='32px' face='monotype corsiva'><center> USER DETAILS....</center></font></p></body></html>\n ");
 
                 out.println("<table border=5 width=100% height=100% align=center>"
                         + "<tr>"
@@ -71,8 +71,6 @@ public class UserServlet extends HttpServlet
                     String address = rs.getString(7);
                     
                     out.println("<tr align=center >"+ "<td >" +name+"<td width ='20%' >"+event+"<td > "+person+"<td > "+ dt +" <td > "+mail+" <td> "+contact+"<td >  "+address+"</tr>");
-                    out.println("<br>");
-                    out.println("<br>"); 
                     
                 }
                  out.println("</table>");

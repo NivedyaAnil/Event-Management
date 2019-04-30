@@ -49,9 +49,9 @@ public class UserServiceWed extends HttpServlet {
                 PreparedStatement ps = con.prepareStatement("select * from wedding");
                 ResultSet rs = ps.executeQuery();
                 
-                out.println("<html><head></head><body background='box2.jpeg'><center><img src=\"icon.PNG\" height=\"150px\" width=\"250px\"></center><p><font size='32px' face='monotype corsiva'><center> YOUR DETAILS HAVE BEEN ADDED....</center></font></p></body></html>\n ");
+                out.println("<html><head></head><body background='box2.jpeg'><center><img src=\"icon.PNG\" height=\"150px\" width=\"250px\"></center><p><font size='32px' face='monotype corsiva'><center> WEDDING DETAILS....</center></font></p></body></html>\n ");
 
-                out.println("<table border=5 width=100% height=100% align=center>"
+                out.println("<table border=10 width=100% height=100% align=center>"
                         + "<tr>"
                         +"<th> EMAIL </th>"
                         + "<th>STAGE </th>"
@@ -98,8 +98,7 @@ public class UserServiceWed extends HttpServlet {
                     
  
                     out.println("<tr align=center ><td>"+rs.getString("email")+"</td>"+ "<td >" +stage+"<td width ='20%' >"+stageprice+"<td > "+decoration+"<td > "+ decorationprice +" <td > "+lightsound+"<td > "+lightsoundprice+"<td > "+cameravideo+"<td > "+cameravideoprice+"<td > "+catering+"<td > "+cateringprice+"<td > "+cake+"<td > "+cakeprice+"<td > "+makeup+"<td > "+makeupprice+"<td > "+car+"<td > "+carprice+"<td > "+honeymoon+"<td > "+honeymoonprice+"</tr>");
-                    out.println("<br>");
-                    out.println("<br>"); 
+
                     
                 }
                  out.println("</table>");
